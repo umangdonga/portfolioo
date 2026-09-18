@@ -30,18 +30,31 @@ export const DesignHighlights: React.FC = () => {
 
   const renderActiveMockup = (id: string) => {
     switch (id) {
-      case 'gharbedhu':
-        return <GharbedhuMockup />;
-      case 'captain-ticketu':
-        return <CaptainTicketuMockup />;
-      case 'campus-connect':
-        return <CampusConnectMockup />;
+      case 'campus-catering':
       case 'indu-cafe':
         return <InduCafeMockup />;
+      case 'campus-connect':
+        return <CampusConnectMockup />;
+      case 'bookmyshow-kid':
+      case 'captain-ticketu':
+        return <CaptainTicketuMockup />;
+      case 'gharbedhu':
+        return <GharbedhuMockup />;
       case 'ridebox':
         return <RideBoxMockup />;
+      case 'ux-laws-analysis':
+      case 'care-band':
       default:
-        return <GharbedhuMockup />;
+        return (
+          <div className="max-w-4xl w-full rounded-2xl overflow-hidden shadow-2xl border border-neutral-800 bg-neutral-950">
+            <img
+              src={currentItem.image}
+              alt={currentItem.title}
+              className="w-full h-auto object-contain"
+              loading="lazy"
+            />
+          </div>
+        );
     }
   };
 
@@ -138,8 +151,11 @@ export const DesignHighlights: React.FC = () => {
                     : 'bg-white dark:bg-neutral-900 text-neutral-600 dark:text-neutral-400 border border-neutral-200 dark:border-neutral-800 hover:border-neutral-400'
                 }`}
               >
-                {item.id === 'gharbedhu' && <Laptop className="w-3.5 h-3.5" />}
-                {item.id !== 'gharbedhu' && <Smartphone className="w-3.5 h-3.5" />}
+                {(item.id === 'gharbedhu' || item.id === 'ux-laws-analysis') ? (
+                  <Laptop className="w-3.5 h-3.5" />
+                ) : (
+                  <Smartphone className="w-3.5 h-3.5" />
+                )}
                 <span>{item.title.split('—')[0].trim()}</span>
               </button>
             );

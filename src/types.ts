@@ -13,6 +13,7 @@ export interface Project {
   solution: string;
   keyFeatures: string[];
   deliverables: string[];
+  behanceUrl: string;
 }
 
 export interface SkillCard {

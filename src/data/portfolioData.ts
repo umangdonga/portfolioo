@@ -4,7 +4,9 @@ import {
   CAPTAIN_TICKETU_SVG,
   CAMPUS_CONNECT_SVG,
   INDU_CAFE_SVG,
-  RIDEBOX_SVG
+  RIDEBOX_SVG,
+  CARE_BAND_SVG,
+  UX_LAWS_ANALYSIS_SVG
 } from './highlightSvgs';
 
 export const PERSONAL_INFO = {
@@ -64,77 +66,148 @@ export const SKILL_CARDS: SkillCard[] = [
 
 export const DESIGN_HIGHLIGHTS: HighlightScreen[] = [
   {
-    id: 'gharbedhu',
-    title: "Gharbedhu.com — Men's E-Commerce Storefront",
-    subtitle: 'Responsive menswear shopping platform with category filters, popular sorting, and streamlined checkout',
-    category: 'E-Commerce / Web Application',
-    image: GHARBEDHU_SVG,
-    metrics: 'Responsive Web Storefront',
-    themeColor: '#1b2559'
+    id: 'campus-catering',
+    title: 'Campus Catering — A Digital Solution for University Dining',
+    subtitle: 'High-speed campus food ordering with itemized perforated tickets, live cooking countdowns, and quick pickups',
+    category: 'Food & Beverage / Campus Dining Mobile App',
+    image: INDU_CAFE_SVG,
+    metrics: 'Real-Time Queue Reduction',
+    themeColor: '#facc15'
   },
   {
-    id: 'captain-ticketu',
-    title: 'Captain Ticketu — Kids Movie Booking & Parent Control',
-    subtitle: 'Safe movie ticketing app with mascot onboarding, parental approval controls, age rating tiers, and showtime booking',
-    category: 'Family & Entertainment / Mobile App',
-    image: CAPTAIN_TICKETU_SVG,
-    metrics: '3-Screen Safe Booking Flow',
-    themeColor: '#dc2626'
+    id: 'ux-laws-analysis',
+    title: '10 Laws of UX — Comprehensive Competitive App Analysis',
+    subtitle: 'Systematic heuristic benchmarking of leading consumer mobile apps based on Hick’s, Fitts’s, and Jakob’s Laws',
+    category: 'UX Research / Heuristic Ergonomics',
+    image: UX_LAWS_ANALYSIS_SVG,
+    metrics: '6 Apps Benchmarked',
+    themeColor: '#3b82f6'
   },
   {
     id: 'campus-connect',
-    title: 'CampusConnect — University Student Portal & Campus Guide',
-    subtitle: 'Smart campus companion featuring 3D isometric building exploration, quick service actions, and academic notifications',
-    category: 'EdTech & Smart Campus / Mobile App',
+    title: 'CampusConnect — Smart Campus Navigation & Student Companion',
+    subtitle: 'Unified student portal with interactive 3D building maps, bus schedules, service shortcuts, and academic updates',
+    category: 'EdTech & Smart Campus / Navigation App',
     image: CAMPUS_CONNECT_SVG,
     metrics: 'All-in-One Campus Companion',
     themeColor: '#0f2942'
   },
   {
-    id: 'indu-cafe',
-    title: 'Indu Cafe — Dark Food Ordering & Live Order Tracking',
-    subtitle: 'Atmospheric food app with category carousels, perforated live order tickets, customizable meals, and cart management',
-    category: 'Food & Beverage / Dark Theme Mobile App',
-    image: INDU_CAFE_SVG,
-    metrics: 'Real-Time Order Tracking',
-    themeColor: '#facc15'
+    id: 'care-band',
+    title: 'Use Care Band — Wearable Safety & Guardian Support Ecosystem',
+    subtitle: 'Discreet smart wearable featuring one-touch emergency SOS, automated fall detection, and live GPS guardian tracking',
+    category: 'HealthTech & Wearable IoT / Safety Device',
+    image: CARE_BAND_SVG,
+    metrics: 'Instant SOS Telemetry',
+    themeColor: '#0284c7'
   },
   {
-    id: 'ridebox',
-    title: 'RideBox Mobility — Urban Ride Hailing & Trip Booking',
-    subtitle: 'On-demand transit application with 8 service suggestions, safety gear promotion, live route tracking, and vehicle selection',
-    category: 'Mobility & Logistics / On-Demand Service',
-    image: RIDEBOX_SVG,
-    metrics: 'Fast Multi-Modal Booking',
-    themeColor: '#eab308'
+    id: 'bookmyshow-kid',
+    title: 'BookMyShow Kid Version — Safe Family Movie Ticketing',
+    subtitle: 'Kid-friendly movie booking ecosystem featuring Captain Ticketu mascot, parental permission locks, and age rating tiers',
+    category: 'Family & Entertainment / Mobile App',
+    image: CAPTAIN_TICKETU_SVG,
+    metrics: '100% Parent Controlled',
+    themeColor: '#dc2626'
   }
 ];
 
 export const PROJECTS: Project[] = [
   {
-    id: 'project-gharbedhu',
-    title: "Gharbedhu.com: Men's E-Commerce Storefront",
-    category: 'E-Commerce & Responsive Web Design',
-    description: "A complete online shopping storefront for men's fashion, balancing warm brand storytelling, quick multi-category filtering, and clean product discovery.",
-    image: GHARBEDHU_SVG,
+    id: 'project-campus-catering',
+    title: 'Innovation: A Digital Solution for Campus Catering',
+    category: 'Food & Beverage / EdTech Mobile App',
+    description: 'A high-speed campus catering application designed to eliminate lunch-hour queues, featuring contactless ordering, itemized digital tickets, and live kitchen preparation countdowns.',
+    image: INDU_CAFE_SVG,
     role: 'Lead UI/UX Designer',
-    timeline: '6 Weeks',
-    impact: 'Streamlined apparel browsing with intuitive category tagging and instant search feedback',
-    tags: ['E-Commerce', 'Web Design', 'Filter Architecture', 'Desktop & Mobile'],
-    overview: "Gharbedhu.com was designed to bring modern men's fashion to users with maximum clarity and effortless navigation. The project addresses friction in catalog browsing by pairing an inviting peach header with a sticky multi-category filter and clean product cards.",
-    challenge: "Online apparel shoppers often get frustrated with visual clutter, sluggish filtering, and confusing product card hierarchies that obscure pricing and user ratings.",
-    solution: "Designed an editorial layout with high-contrast typography, an orange search pill, a multi-tag filter sidebar (Shirts, T-Shirts, Jeans, Trousers, Jackets), and high-legibility product cards featuring ratings and clear pricing.",
+    timeline: '5 Weeks',
+    impact: 'Reduced cafeteria order turnaround time by 52% and eliminated peak-hour queue congestion',
+    tags: ['Campus Catering', 'Food Ordering', 'Queue Reduction', 'Real-Time Tracking'],
+    overview: 'Innovation: A Digital Solution for Campus Catering solves the intense congestion of university dining halls. With tight 15-to-30-minute intervals between lectures, hundreds of students converge on food counters simultaneously. This digital solution provides contactless ordering, live kitchen preparation transparency, and an intuitive perforated order ticket.',
+    challenge: 'Campus dining facilities struggle with extreme peak-hour rush, chaotic queue lines, cash exchange friction, and order mix-ups. Students frequently miss meals or arrive late to lectures due to unpredictable preparation times.',
+    solution: 'Engineered a fast, accessible mobile ordering flow with instant category filtering, real-time live prep countdowns (e.g. 10 min remaining), perforated digital pickup tokens, and smart slot-based order pickup synchronized with student lecture schedules.',
     keyFeatures: [
-      "Custom brand identity with Gharbedhu.com home icon and high-contrast navy navigation",
-      "Peach hero banner introducing brand personality without taking away from catalog focus",
-      "Sidebar filter supporting multi-select attributes (Shirts, T-Shirts, Ethnic Wear, Jackets)",
-      "Product cards with customer review ratings (★★★★☆), price badges, and wishlist quick-action"
+      'Real-time kitchen order countdown card showing live preparation status and itemized breakdown',
+      'Perforated digital token ticket acting as instant proof-of-pickup at delivery counters',
+      'Quick category navigation for Burgers, Pizzas, Noodles, Parathas, and beverage cross-sells',
+      'Transparent payment breakdown with instant student wallet and UPI support',
+      'Scheduled order pickup allowing students to order during lecture and collect immediately at class dismissal'
     ],
-    deliverables: ['Information Architecture', 'Desktop Web Mockups', 'Mobile Web Responsive Breakpoints', 'Filter Flow Spec']
+    deliverables: ['User Research & Cafeteria Observation', 'Mobile UI Design (Figma)', 'Live Order Ticket Interaction Model', 'Usability Testing Report'],
+    behanceUrl: 'https://www.behance.net/gallery/249721671/Innovation-A-Digital-Solution-for-Campus-Catering'
   },
   {
-    id: 'project-captain-ticketu',
-    title: 'Captain Ticketu: Kids Movie Booking & Parent Control',
+    id: 'project-ux-laws-analysis',
+    title: 'Competitive App Analysis Based on the 10 Laws of UX',
+    category: 'UX Research & Heuristic Evaluation',
+    description: 'A rigorous comparative UX benchmark evaluating market-leading consumer mobile apps against foundational psychological principles and cognitive ergonomics.',
+    image: UX_LAWS_ANALYSIS_SVG,
+    role: 'UX Researcher & Heuristic Analyst',
+    timeline: '4 Weeks',
+    impact: 'Benchmarked 6 enterprise applications and identified 28 critical heuristic violations',
+    tags: ['10 Laws of UX', 'Competitive Analysis', 'Cognitive Ergonomics', 'Heuristic Audit'],
+    overview: 'This project conducts an in-depth empirical audit comparing leading applications (including BookMyShow, Uber, and food delivery apps) against the 10 Laws of UX. The study focuses on understanding how cognitive load, touch target distances, and mental model consistency directly drive conversion and user retention.',
+    challenge: 'Many digital consumer products inadvertently induce cognitive fatigue and decision paralysis through excessive choices, misaligned hit-targets, and violations of conventional mental models, degrading user trust.',
+    solution: 'Developed a structured 10-law evaluation framework examining Hick’s Law, Fitts’s Law, Jakob’s Law, Miller’s Law, and the Peak-End Rule. Formulated quantified usability scorecards and actionable redesign solutions to streamline user velocity.',
+    keyFeatures: [
+      'Hick’s Law decision latency audit: Benchmarking checkout form complexity against progressive disclosure',
+      'Fitts’s Law thumb-zone ergonomic analysis: Measuring target distance and touch hit areas (48px+ standard)',
+      'Jakob’s Law mental model consistency map across multi-platform navigation paradigms',
+      'Miller’s Law cognitive chunking matrix: Organizing dense data into 7±2 digestible perceptual groups',
+      'Actionable heuristic scorecard and design recommendation blueprint for product teams'
+    ],
+    deliverables: ['Competitive Heuristic Audit Report', '10 Laws of UX Scorecards', 'Ergonomic Hit-Target Mapping', 'Redesign Pattern Guidelines'],
+    behanceUrl: 'https://www.behance.net/gallery/249721329/Competitive-App-Analysis-Based-on-the-10-Laws-of-UX'
+  },
+  {
+    id: 'project-campus-connect',
+    title: 'Campus Connect: Smart Campus Navigation App',
+    category: 'EdTech & Smart Campus / Mobile Navigation',
+    description: 'An all-in-one digital campus companion unifying interactive map navigation, rapid student services, hostel requests, and categorized notifications.',
+    image: CAMPUS_CONNECT_SVG,
+    role: 'UX Researcher & Interaction Designer',
+    timeline: '6 Weeks',
+    impact: 'Consolidated 5 disparate university portals into a single high-speed mobile dashboard',
+    tags: ['EdTech', 'Campus Navigation', 'Student Portal', 'Notification System'],
+    overview: 'CampusConnect was created to eliminate the friction university students face daily — from locating unfamiliar classrooms across sprawling multi-acre campuses and tracking campus shuttles to checking exam grades and library due dates.',
+    challenge: 'Students had to log into separate web portals for academic grades, bus schedules, hostel facilities, and club announcements, leading to missed deadlines, lost time, and wayfinding anxiety.',
+    solution: 'Designed a unified mobile portal organized into an intuitive dashboard featuring personalized greetings, an interactive 3D campus map card, high-contrast quick action tiles, and a split notification feed (Academic vs. Social).',
+    keyFeatures: [
+      'Personalized student header ("Good Morning, Umang") with unread notification badge indicator',
+      'Smart search bar for finding buildings, laboratories, and lecture classrooms instantly',
+      'Interactive Campus Map card with 3D isometric buildings and direct "View Full Map" action',
+      'High-contrast 2x2 Quick Action grid: Bus Service, Admissions, Hostel, and Digital Library',
+      'Categorized notification center separating critical Academic Updates from Social Events'
+    ],
+    deliverables: ['Student Journey Maps', 'Campus Navigation Heuristic Audit', 'Mobile High-Fidelity Mockups', 'Notification State Machine'],
+    behanceUrl: 'https://www.behance.net/gallery/249721127/Campus-Connect-Smart-Campus-Navigation-App'
+  },
+  {
+    id: 'project-care-band',
+    title: 'Use Care Band: Safety & Support Wearable',
+    category: 'HealthTech & Wearable IoT / Safety Device',
+    description: 'A discrete safety smart band and companion mobile ecosystem providing one-touch emergency SOS, automated fall detection, and live GPS guardian tracking.',
+    image: CARE_BAND_SVG,
+    role: 'Lead Product & IoT UX Designer',
+    timeline: '5 Weeks',
+    impact: 'Delivered sub-3-second emergency notification dispatch to guardian circles and emergency services',
+    tags: ['Wearable IoT', 'HealthTech', 'SOS Trigger', 'Live GPS Telemetry'],
+    overview: 'Use Care Band is an assistive wearable safety device and mobile platform engineered for vulnerable individuals — including elderly seniors, solitary commuters, and university students. The ecosystem pairs tactile hardware with instant cloud telemetry to provide peace of mind without social stigma.',
+    challenge: 'Existing panic and safety systems are cumbersome, visually clinical, and require unlocking a smartphone during moments of panic or physical incapacitation, resulting in critical response delays.',
+    solution: 'Designed an ergonomic wrist wearable with a tactile one-touch SOS trigger, integrated AI fall detection, and a mobile companion app enabling real-time geofence safe-zones and encrypted live GPS beaconing to designated emergency guardian circles.',
+    keyFeatures: [
+      'Tactile one-touch emergency SOS trigger with silent haptic feedback confirmation',
+      'Automated fall detection using onboard gyroscope and accelerometer sensor intelligence',
+      'Live GPS breadcrumb beaconing with interactive safe geofence radius monitoring',
+      'Emergency Response Circle with verified guardian priority calling and campus patrol link',
+      'Real-time vital telemetry monitoring resting heart rate, body temperature, and device battery status'
+    ],
+    deliverables: ['Wearable Ergonomics & Interaction Flow', 'Guardian Mobile Companion App UI', 'Emergency State Machine', 'Bluetooth Low-Energy Sync Specs'],
+    behanceUrl: 'https://www.behance.net/gallery/249718331/Use-Care-Band-Safety-Support-Wearable'
+  },
+  {
+    id: 'project-bookmyshow-kid',
+    title: 'BookMyShow Kid Version',
     category: 'Family & Entertainment / Mobile App',
     description: 'A kid-friendly movie ticketing platform featuring a whimsical mascot guide, comprehensive parental controls, age ratings, and cinema seat booking.',
     image: CAPTAIN_TICKETU_SVG,
@@ -142,7 +215,7 @@ export const PROJECTS: Project[] = [
     timeline: '5 Weeks',
     impact: 'Provided parents peace of mind with 100% transparent permission toggles before tickets can be purchased',
     tags: ['Parental Control', 'Kids UX', 'Movie Ticketing', 'Mobile Prototype'],
-    overview: 'Captain Ticketu bridges the gap between fun entertainment for children and peace of mind for parents. Children enjoy an engaging, mascot-guided movie selection while parents retain full control over bookings, payments, and age-appropriate content.',
+    overview: 'BookMyShow Kid Version (Captain Ticketu) bridges the gap between fun entertainment for children and peace of mind for parents. Children enjoy an engaging, mascot-guided movie selection while parents retain full control over bookings, payments, and age-appropriate content.',
     challenge: 'Most ticketing apps are built solely for adults, risking accidental in-app charges and exposing young audiences to age-inappropriate movie trailers and bookings.',
     solution: 'Engineered a dual-experience architecture with a dedicated Parent Control screen guarded by passcode, easy toggle switches for booking/payment approvals, and a simplified cinema and time slot picker.',
     keyFeatures: [
@@ -152,72 +225,8 @@ export const PROJECTS: Project[] = [
       'Cinema list with distance indicators (Galaxy Cinemas, PVR Motera, Apple Cinema) and popularity tags',
       'Segmented showtime selector grouped into Morning, Afternoon, and Evening slots with real-time sold-out status'
     ],
-    deliverables: ['User Persona Study (Kids & Parents)', 'Figma Mobile App Wireframes', 'Interactive Micro-Interactions', 'Passcode Security UX Flow']
-  },
-  {
-    id: 'project-campus-connect',
-    title: "CampusConnect: Umang's University Student Portal",
-    category: 'EdTech & Smart Campus Companion',
-    description: 'An all-in-one digital campus companion unifying interactive map navigation, rapid student services, hostel requests, and categorized notifications.',
-    image: CAMPUS_CONNECT_SVG,
-    role: 'UX Researcher & Interaction Designer',
-    timeline: '6 Weeks',
-    impact: 'Consolidated 5 disparate university portals into a single high-speed mobile dashboard',
-    tags: ['EdTech', 'Campus Navigation', 'Student Portal', 'Notification System'],
-    overview: "CampusConnect was created to eliminate the friction university students face daily — from locating unfamiliar classrooms and tracking campus buses to checking exam grades and library due dates.",
-    challenge: 'Students had to log into separate web portals for academic grades, bus schedules, hostel facilities, and club announcements, leading to missed deadlines and confusion.',
-    solution: 'Designed a unified mobile portal organized into an intuitive dashboard featuring personalized greetings, an interactive 3D campus map card, high-contrast quick action tiles, and a split notification feed (Academic vs. Social).',
-    keyFeatures: [
-      'Personalized student header ("Good Morning, Umang") with unread notification badge indicator',
-      'Smart search bar for finding buildings, laboratories, and lecture classrooms instantly',
-      'Interactive Campus Map card with 3D isometric buildings and direct "View Full Map" action',
-      'High-contrast 2x2 Quick Action grid: Bus Service, Admissions, Hostel, and Digital Library',
-      'Categorized notification center separating critical Academic Updates (New Grades, Library Due) from Social Updates (Club Events, Live Music)'
-    ],
-    deliverables: ['Student Journey Maps', 'Campus Navigation Heuristic Audit', 'Mobile High-Fidelity Mockups', 'Notification State Machine']
-  },
-  {
-    id: 'project-indu-cafe',
-    title: 'Indu Cafe: Dark Mode Food Ordering & Live Ticket',
-    category: 'Food & Beverage / Dark UI Mobile App',
-    description: 'A mouthwatering food and beverage ordering mobile app designed with a sleek dark aesthetic, yellow accent hierarchy, and live perforated order status tickets.',
-    image: INDU_CAFE_SVG,
-    role: 'Lead UI Designer',
-    timeline: '4 Weeks',
-    impact: 'Reduced order anxiety with the physical-ticket inspired live countdown card',
-    tags: ['Food Ordering', 'Dark Theme UI', 'Micro-Interactions', 'Live Order Tracking'],
-    overview: 'Indu Cafe delivers a modern culinary ordering experience. Designed in a sophisticated dark palette (#121212) with radiant cheese-yellow accents, the app makes browsing meals, customizing orders, and tracking preparation intuitive and delightful.',
-    challenge: 'Many food ordering applications bury live kitchen progress under complex sub-menus, creating user anxiety during busy cafe hours.',
-    solution: 'Designed an unmistakable yellow perforated order ticket right on the home dashboard that shows order confirmation, itemized total, and estimated prep time (10 minutes) with a direct live-status action.',
-    keyFeatures: [
-      'Warm greeting header ("Hello Akanksha / Welcome to the indu cafe") with instant search',
-      'Horizontal category pills for fast filtering: All, Pizza, Burger, Noodles, Paratha',
-      'Yellow perforated order ticket showing live kitchen prep countdown, itemized bill (Classic Burger Rs.150, Cold Drink Rs.60), and live order status',
-      'Seamless cart screen with item quantity steppers, cross-sell snacks (Ice Cold Drink, Potato Chips), coupon code input, and transparent payment breakdown'
-    ],
-    deliverables: ['Visual Style Guide (Dark & Radiant Yellow)', 'Food Ordering Wireframes', 'Live Ticket Card Motion Spec', 'Checkout Flow Prototype']
-  },
-  {
-    id: 'project-ridebox',
-    title: 'RideBox Mobility: On-Demand Ride Hailing Experience',
-    category: 'Mobility & Logistics / On-Demand Service',
-    description: 'An urban mobility platform offering quick vehicle booking across Autos, Motorbikes, and Scooters with transparent pricing and live route telemetry.',
-    image: RIDEBOX_SVG,
-    role: 'Product Designer & Service Architect',
-    timeline: '5 Weeks',
-    impact: 'Simplified vehicle choice with instant seating capacity indicators and faster arrival badges',
-    tags: ['Mobility UX', 'Ride Hailing', 'Live Map Tracking', 'Bottom Sheet UX'],
-    overview: 'RideBox is designed for urban commuters needing reliable, fast, and multi-modal transit options. The app provides instant access to 8 mobility services, route navigation, and upfront pricing with discount tags.',
-    challenge: 'Commuters needing urgent transport often get confused by complex tariff structures and unclear vehicle capacities during peak rush hours.',
-    solution: 'Crafted a vibrant yellow and crisp black design featuring an 8-service suggestion grid, interactive pickup point entry with "Later" scheduling, and an interactive bottom sheet comparing Autos, Bikes, and Scooters with arrival ETAs and transparent discounts.',
-    keyFeatures: [
-      'Clean RIDE BOX brand identity with top search bar supporting immediate and "Later" scheduled rides',
-      'Suggestions grid covering Trip, Send Items (50% off tag), Intercity, Reserve promo, Rentals, Teens, and Seniors',
-      'Vibrant yellow "Choose a trip" bottom sheet displaying vehicle types (Auto 3 seats, Bike 1 seat, Scooter 1 seat)',
-      'Real-time pricing comparison with crossed-out discount prices ($47.50 vs 50.00) and ⚡ Faster arrival badges',
-      'Integrated pickup point HUD with live route map showing duration and destination'
-    ],
-    deliverables: ['Mobility Service Blueprint', 'Driver & Rider Flow Diagram', 'Interactive Bottom Sheet Prototype', 'Design Token Specs']
+    deliverables: ['User Persona Study (Kids & Parents)', 'Figma Mobile App Wireframes', 'Interactive Micro-Interactions', 'Passcode Security UX Flow'],
+    behanceUrl: 'https://www.behance.net/gallery/249716123/Bookmyshow-Kid-Version'
   }
 ];
 

@@ -1049,3 +1049,333 @@ export const RIDEBOX_SVG = `data:image/svg+xml;utf8,${encodeURIComponent(`
   </g>
 </svg>
 `)}`;
+
+// 6. Care Band: Safety & Support Wearable (HealthTech & IoT)
+export const CARE_BAND_SVG = `data:image/svg+xml;utf8,${encodeURIComponent(`
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="100%" height="100%">
+  <defs>
+    <linearGradient id="cbBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="100%" stop-color="#04070d" />
+    </linearGradient>
+    <linearGradient id="bandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0ea5e9" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+    <filter id="cbGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="cbShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="25" stdDeviation="25" flood-color="#000000" flood-opacity="0.75" />
+    </filter>
+  </defs>
+
+  <!-- Dark Atmospheric Backdrop -->
+  <rect width="1200" height="750" fill="url(#cbBg)" />
+
+  <!-- Background Decorative Wave & Grid -->
+  <path d="M 0 500 Q 300 450 600 520 T 1200 460" stroke="#0ea5e9" stroke-width="1.5" stroke-opacity="0.15" fill="none" />
+  <path d="M 0 560 Q 300 510 600 580 T 1200 520" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.1" fill="none" />
+
+  <!-- PHONE 1: Wearable Dashboard & Vital Telemetry -->
+  <g transform="translate(180, 45)" filter="url(#cbShadow)">
+    <rect width="360" height="660" rx="44" fill="#0b111e" stroke="#1e293b" stroke-width="3.5" />
+    <rect x="12" y="12" width="336" height="636" rx="34" fill="#0f172a" />
+    <!-- Dynamic Island -->
+    <rect x="120" y="20" width="96" height="24" rx="12" fill="#020617" />
+    <circle cx="195" cy="32" r="3" fill="#10b981" />
+    <text x="36" y="38" font-family="sans-serif" font-size="12" font-weight="bold" fill="#f8fafc">9:41</text>
+
+    <!-- Header -->
+    <g transform="translate(24, 60)">
+      <text x="0" y="16" font-family="sans-serif" font-size="11" font-weight="bold" fill="#38bdf8" letter-spacing="1">CARE BAND ECOSYSTEM</text>
+      <text x="0" y="38" font-family="'Plus Jakarta Sans', sans-serif" font-size="20" font-weight="bold" fill="#ffffff">Safety & Support</text>
+      <circle cx="280" cy="24" r="14" fill="#0284c7" fill-opacity="0.2" />
+      <circle cx="280" cy="24" r="5" fill="#38bdf8" />
+    </g>
+
+    <!-- Wearable Status Card -->
+    <g transform="translate(20, 115)">
+      <rect width="296" height="110" rx="18" fill="#1e293b" stroke="#334155" stroke-width="1" />
+      <circle cx="50" cy="55" r="32" fill="#0284c7" fill-opacity="0.15" />
+      <!-- Smart Band Icon -->
+      <rect x="35" y="35" width="30" height="40" rx="8" fill="#38bdf8" />
+      <rect x="42" y="42" width="16" height="26" rx="4" fill="#0f172a" />
+      <circle cx="50" cy="55" r="3" fill="#10b981" />
+
+      <text x="96" y="42" font-family="sans-serif" font-size="14" font-weight="bold" fill="#ffffff">CareBand v2 Linked</text>
+      <text x="96" y="60" font-family="sans-serif" font-size="11" fill="#94a3b8">Battery: 94% • BT 5.3 Active</text>
+      
+      <rect x="96" y="72" width="90" height="20" rx="10" fill="#065f46" />
+      <text x="108" y="86" font-family="sans-serif" font-size="9.5" font-weight="bold" fill="#34d399">● STATUS: SAFE</text>
+    </g>
+
+    <!-- Live Health Telemetry Grid -->
+    <g transform="translate(20, 240)">
+      <!-- Heart Rate -->
+      <rect width="142" height="96" rx="16" fill="#1e293b" stroke="#334155" />
+      <text x="14" y="24" font-size="14">❤️</text>
+      <text x="14" y="52" font-family="sans-serif" font-size="22" font-weight="bold" fill="#f43f5e">74 <tspan font-size="11" fill="#94a3b8">BPM</tspan></text>
+      <text x="14" y="76" font-family="sans-serif" font-size="10" fill="#94a3b8">Resting Heart Rate</text>
+
+      <!-- Body Temp -->
+      <g transform="translate(154, 0)">
+        <rect width="142" height="96" rx="16" fill="#1e293b" stroke="#334155" />
+        <text x="14" y="24" font-size="14">🌡️</text>
+        <text x="14" y="52" font-family="sans-serif" font-size="22" font-weight="bold" fill="#38bdf8">98.4 <tspan font-size="11" fill="#94a3b8">°F</tspan></text>
+        <text x="14" y="76" font-family="sans-serif" font-size="10" fill="#94a3b8">Optimal Normal</text>
+      </g>
+    </g>
+
+    <!-- Emergency One-Tap SOS Action -->
+    <g transform="translate(20, 355)">
+      <rect width="296" height="120" rx="20" fill="#450a0a" stroke="#dc2626" stroke-width="1.5" />
+      <circle cx="60" cy="60" r="32" fill="#ef4444" filter="url(#cbGlow)" />
+      <text x="44" y="66" font-family="sans-serif" font-size="14" font-weight="900" fill="#ffffff">SOS</text>
+      <text x="110" y="48" font-family="sans-serif" font-size="15" font-weight="bold" fill="#fecaca">Emergency Trigger</text>
+      <text x="110" y="68" font-family="sans-serif" font-size="10.5" fill="#f87171">Long press 3s or Band double-tap</text>
+      <text x="110" y="86" font-family="sans-serif" font-size="9.5" fill="#cbd5e1">Auto-notifies 3 Guardians + EMS</text>
+    </g>
+
+    <!-- Fall Detection / Safe Geofence -->
+    <g transform="translate(20, 490)">
+      <rect width="296" height="74" rx="16" fill="#1e293b" stroke="#334155" />
+      <text x="16" y="32" font-size="18">🛡️</text>
+      <text x="48" y="28" font-family="sans-serif" font-size="12" font-weight="bold" fill="#ffffff">Automated Fall Detection</text>
+      <text x="48" y="44" font-family="sans-serif" font-size="10" fill="#94a3b8">Gyroscope + Accelerometer AI</text>
+      <text x="48" y="60" font-family="sans-serif" font-size="9" fill="#10b981">Active Guardian Monitoring</text>
+      <circle cx="265" cy="38" r="12" fill="#10b981" fill-opacity="0.2" />
+      <path d="M260 38 L264 42 L271 34" stroke="#10b981" stroke-width="2" fill="none" />
+    </g>
+
+    <!-- Bottom Nav -->
+    <rect x="20" y="585" width="296" height="48" rx="24" fill="#0b111e" stroke="#1e293b" />
+    <text x="50" y="615" font-size="16">🛡️</text>
+    <text x="120" y="615" font-size="16">📍</text>
+    <text x="190" y="615" font-size="16">📈</text>
+    <text x="260" y="615" font-size="16">⚙️</text>
+  </g>
+
+  <!-- PHONE 2: Guardian Live GPS Tracking & Emergency Circle -->
+  <g transform="translate(660, 45)" filter="url(#cbShadow)">
+    <rect width="360" height="660" rx="44" fill="#0b111e" stroke="#1e293b" stroke-width="3.5" />
+    <rect x="12" y="12" width="336" height="636" rx="34" fill="#0f172a" />
+    <rect x="120" y="20" width="96" height="24" rx="12" fill="#020617" />
+    <text x="36" y="38" font-family="sans-serif" font-size="12" font-weight="bold" fill="#f8fafc">9:41</text>
+
+    <!-- Live Map Canvas -->
+    <g transform="translate(12, 50)">
+      <rect width="336" height="340" rx="20" fill="#1e293b" />
+      <!-- Grid Roads -->
+      <line x1="0" y1="120" x2="336" y2="120" stroke="#334155" stroke-width="12" />
+      <line x1="160" y1="0" x2="160" y2="340" stroke="#334155" stroke-width="12" />
+      <line x1="40" y1="240" x2="336" y2="240" stroke="#334155" stroke-width="8" />
+      <!-- Safe Geofence Zone Circle -->
+      <circle cx="160" cy="160" r="100" fill="#0284c7" fill-opacity="0.12" stroke="#0ea5e9" stroke-width="2" stroke-dasharray="6,4" />
+      <!-- User Pin -->
+      <circle cx="160" cy="160" r="18" fill="#0284c7" fill-opacity="0.4" />
+      <circle cx="160" cy="160" r="8" fill="#38bdf8" />
+      <circle cx="160" cy="160" r="3" fill="#ffffff" />
+      
+      <!-- Callout Badge -->
+      <g transform="translate(80, 85)">
+        <rect width="160" height="38" rx="10" fill="#0f172a" stroke="#38bdf8" />
+        <text x="12" y="16" font-family="sans-serif" font-size="8.5" font-weight="bold" fill="#38bdf8">INSIDE SAFE HOME ZONE</text>
+        <text x="12" y="30" font-family="sans-serif" font-size="10" fill="#ffffff">GPS Accuracy: ± 2 meters</text>
+      </g>
+    </g>
+
+    <!-- Trusted Guardian Circle -->
+    <g transform="translate(20, 410)">
+      <text x="4" y="0" font-family="sans-serif" font-size="13" font-weight="bold" fill="#ffffff">Emergency Response Circle</text>
+      
+      <!-- Contact 1: Mother -->
+      <g transform="translate(0, 16)">
+        <rect width="296" height="54" rx="14" fill="#1e293b" />
+        <circle cx="30" cy="27" r="16" fill="#ec4899" />
+        <text x="24" y="32" font-size="12" fill="#ffffff">👩</text>
+        <text x="56" y="24" font-family="sans-serif" font-size="12" font-weight="bold" fill="#ffffff">Mom (Primary Contact)</text>
+        <text x="56" y="40" font-family="sans-serif" font-size="10" fill="#34d399">● Instant Alert Verified</text>
+        <circle cx="265" cy="27" r="14" fill="#065f46" />
+        <text x="259" y="32" font-size="12">📞</text>
+      </g>
+
+      <!-- Contact 2: Local EMS -->
+      <g transform="translate(0, 80)">
+        <rect width="296" height="54" rx="14" fill="#1e293b" />
+        <circle cx="30" cy="27" r="16" fill="#dc2626" />
+        <text x="24" y="32" font-size="12" fill="#ffffff">🚑</text>
+        <text x="56" y="24" font-family="sans-serif" font-size="12" font-weight="bold" fill="#ffffff">Campus Emergency Patrol</text>
+        <text x="56" y="40" font-family="sans-serif" font-size="10" fill="#94a3b8">Direct Dispatch Ready</text>
+        <circle cx="265" cy="27" r="14" fill="#7f1d1d" />
+        <text x="259" y="32" font-size="12">🚨</text>
+      </g>
+    </g>
+
+    <!-- Live Telemetry Broadcast Status -->
+    <g transform="translate(20, 560)">
+      <rect width="296" height="52" rx="14" fill="#0284c7" fill-opacity="0.15" stroke="#0284c7" />
+      <text x="16" y="24" font-family="sans-serif" font-size="11" font-weight="bold" fill="#38bdf8">Live Telemetry Encrypted (AES-256)</text>
+      <text x="16" y="40" font-family="sans-serif" font-size="9.5" fill="#94a3b8">Cloud sync every 5s with BLE Fallback</text>
+    </g>
+  </g>
+</svg>
+`)}`;
+
+// 7. Competitive App Analysis Based on the 10 Laws of UX
+export const UX_LAWS_ANALYSIS_SVG = `data:image/svg+xml;utf8,${encodeURIComponent(`
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="100%" height="100%">
+  <defs>
+    <linearGradient id="uxBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#18181b" />
+      <stop offset="100%" stop-color="#09090b" />
+    </linearGradient>
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="750" fill="url(#uxBg)" />
+
+  <!-- Grid Guide Accent Lines -->
+  <line x1="60" y1="120" x2="1140" y2="120" stroke="#27272a" stroke-width="1" />
+  <line x1="60" y1="680" x2="1140" y2="680" stroke="#27272a" stroke-width="1" />
+
+  <!-- Top Hero Header -->
+  <g transform="translate(80, 45)">
+    <rect width="170" height="26" rx="6" fill="#3b82f6" fill-opacity="0.15" stroke="#3b82f6" stroke-width="1" />
+    <text x="12" y="17" font-family="sans-serif" font-size="10.5" font-weight="bold" fill="#60a5fa" letter-spacing="1">UX RESEARCH CASE STUDY</text>
+    <text x="0" y="56" font-family="'Plus Jakarta Sans', sans-serif" font-size="28" font-weight="900" fill="#ffffff">Competitive App Analysis: 10 Laws of UX</text>
+    <text x="0" y="80" font-family="sans-serif" font-size="13" fill="#a1a1aa">Benchmarking cognitive ergonomics, interaction ergonomics, and decision velocity across top consumer platforms</text>
+  </g>
+
+  <!-- Main Analysis Board -->
+  <g transform="translate(80, 145)">
+    <!-- Column 1: Core UX Laws Evaluated -->
+    <g transform="translate(0, 0)" filter="url(#cardShadow)">
+      <rect width="320" height="500" rx="18" fill="#18181b" stroke="#27272a" stroke-width="1.5" />
+      
+      <!-- Section Title -->
+      <rect x="20" y="20" width="280" height="36" rx="8" fill="#27272a" />
+      <text x="36" y="43" font-family="sans-serif" font-size="12" font-weight="bold" fill="#ffffff">10 Laws of UX Framework</text>
+      
+      <!-- Law 1: Hick's Law -->
+      <g transform="translate(20, 72)">
+        <rect width="280" height="70" rx="10" fill="#09090b" stroke="#3f3f46" />
+        <circle cx="25" cy="25" r="10" fill="#3b82f6" />
+        <text x="21" y="29" font-family="sans-serif" font-size="11" font-weight="bold" fill="#ffffff">1</text>
+        <text x="44" y="24" font-family="sans-serif" font-size="12" font-weight="bold" fill="#ffffff">Hick's Law</text>
+        <text x="44" y="40" font-family="sans-serif" font-size="9.5" fill="#a1a1aa">Time to decide increases with choices</text>
+        <rect x="44" y="48" width="120" height="12" rx="6" fill="#1e3a8a" />
+        <rect x="44" y="48" width="95" height="12" rx="6" fill="#3b82f6" />
+        <text x="175" y="58" font-family="sans-serif" font-size="8.5" fill="#93c5fd">92% Compliance</text>
+      </g>
+
+      <!-- Law 2: Fitts's Law -->
+      <g transform="translate(20, 152)">
+        <rect width="280" height="70" rx="10" fill="#09090b" stroke="#3f3f46" />
+        <circle cx="25" cy="25" r="10" fill="#10b981" />
+        <text x="21" y="29" font-family="sans-serif" font-size="11" font-weight="bold" fill="#ffffff">2</text>
+        <text x="44" y="24" font-family="sans-serif" font-size="12" font-weight="bold" fill="#ffffff">Fitts's Law</text>
+        <text x="44" y="40" font-family="sans-serif" font-size="9.5" fill="#a1a1aa">Target distance &amp; touch zone ergonomics</text>
+        <rect x="44" y="48" width="120" height="12" rx="6" fill="#064e3b" />
+        <rect x="44" y="48" width="105" height="12" rx="6" fill="#10b981" />
+        <text x="175" y="58" font-family="sans-serif" font-size="8.5" fill="#6ee7b7">88% Compliance</text>
+      </g>
+
+      <!-- Law 3: Jakob's Law -->
+      <g transform="translate(20, 232)">
+        <rect width="280" height="70" rx="10" fill="#09090b" stroke="#3f3f46" />
+        <circle cx="25" cy="25" r="10" fill="#f59e0b" />
+        <text x="21" y="29" font-family="sans-serif" font-size="11" font-weight="bold" fill="#ffffff">3</text>
+        <text x="44" y="24" font-family="sans-serif" font-size="12" font-weight="bold" fill="#ffffff">Jakob's Law</text>
+        <text x="44" y="40" font-family="sans-serif" font-size="9.5" fill="#a1a1aa">Users expect familiar mental models</text>
+        <rect x="44" y="48" width="120" height="12" rx="6" fill="#78350f" />
+        <rect x="44" y="48" width="112" height="12" rx="6" fill="#f59e0b" />
+        <text x="175" y="58" font-family="sans-serif" font-size="8.5" fill="#fde68a">95% Compliance</text>
+      </g>
+
+      <!-- Law 4: Miller's Law -->
+      <g transform="translate(20, 312)">
+        <rect width="280" height="70" rx="10" fill="#09090b" stroke="#3f3f46" />
+        <circle cx="25" cy="25" r="10" fill="#8b5cf6" />
+        <text x="21" y="29" font-family="sans-serif" font-size="11" font-weight="bold" fill="#ffffff">4</text>
+        <text x="44" y="24" font-family="sans-serif" font-size="12" font-weight="bold" fill="#ffffff">Miller's Law</text>
+        <text x="44" y="40" font-family="sans-serif" font-size="9.5" fill="#a1a1aa">Working memory chunking (7±2 items)</text>
+        <rect x="44" y="48" width="120" height="12" rx="6" fill="#4c1d95" />
+        <rect x="44" y="48" width="90" height="12" rx="6" fill="#8b5cf6" />
+        <text x="175" y="58" font-family="sans-serif" font-size="8.5" fill="#ddd6fe">85% Compliance</text>
+      </g>
+
+      <!-- Summary Pill -->
+      <g transform="translate(20, 395)">
+        <rect width="280" height="85" rx="12" fill="#27272a" />
+        <text x="16" y="24" font-family="sans-serif" font-size="11" font-weight="bold" fill="#ffffff">Evaluated 6 Leading Apps</text>
+        <text x="16" y="44" font-family="sans-serif" font-size="9.5" fill="#a1a1aa">BookMyShow • Uber • Swiggy • Zomato</text>
+        <text x="16" y="62" font-family="sans-serif" font-size="9.5" fill="#a1a1aa">Spotify • Airbnb</text>
+      </g>
+    </g>
+
+    <!-- Column 2: Comparative Heatmaps & Heuristic Breakdown -->
+    <g transform="translate(345, 0)" filter="url(#cardShadow)">
+      <rect width="695" height="500" rx="18" fill="#18181b" stroke="#27272a" stroke-width="1.5" />
+      
+      <!-- Table Header -->
+      <rect x="25" y="20" width="645" height="42" rx="8" fill="#27272a" />
+      <text x="40" y="46" font-family="sans-serif" font-size="12" font-weight="bold" fill="#ffffff">Comparative Heuristic Scoring Matrix</text>
+      <text x="350" y="46" font-family="sans-serif" font-size="11" fill="#a1a1aa">Cognitive Friction Index (Lower is Better)</text>
+
+      <!-- Benchmark Card 1: App A vs App B -->
+      <g transform="translate(25, 75)">
+        <rect width="645" height="120" rx="12" fill="#09090b" stroke="#3f3f46" />
+        <!-- App 1 -->
+        <text x="24" y="28" font-family="sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Fitts's Law: Primary CTA Placement</text>
+        <text x="24" y="48" font-family="sans-serif" font-size="11" fill="#71717a">Bottom thumb-zone accessibility vs top-right menu nesting</text>
+        
+        <rect x="24" y="65" width="280" height="38" rx="8" fill="#1c1917" stroke="#44403c" />
+        <text x="36" y="88" font-family="sans-serif" font-size="11" fill="#fbbf24">App A: Floating Bottom Dock (Fastest)</text>
+        <text x="270" y="88" font-family="sans-serif" font-size="11" font-weight="bold" fill="#4ade80">0.24s</text>
+
+        <rect x="330" y="65" width="290" height="38" rx="8" fill="#1c1917" stroke="#44403c" />
+        <text x="342" y="88" font-family="sans-serif" font-size="11" fill="#f87171">App B: Top Header Menu (Strain Zone)</text>
+        <text x="585" y="88" font-family="sans-serif" font-size="11" font-weight="bold" fill="#ef4444">0.86s</text>
+      </g>
+
+      <!-- Benchmark Card 2: Hick's Law Filtering & Search -->
+      <g transform="translate(25, 210)">
+        <rect width="645" height="120" rx="12" fill="#09090b" stroke="#3f3f46" />
+        <text x="24" y="28" font-family="sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Hick's Law: Decision Complexity during Checkout</text>
+        <text x="24" y="48" font-family="sans-serif" font-size="11" fill="#71717a">Progressive disclosure vs 14 upfront unsegmented form fields</text>
+        
+        <rect x="24" y="65" width="280" height="38" rx="8" fill="#1c1917" stroke="#44403c" />
+        <text x="36" y="88" font-family="sans-serif" font-size="11" fill="#38bdf8">3-Step Accordion Flow</text>
+        <text x="250" y="88" font-family="sans-serif" font-size="11" font-weight="bold" fill="#38bdf8">-42% Drop</text>
+
+        <rect x="330" y="65" width="290" height="38" rx="8" fill="#1c1917" stroke="#44403c" />
+        <text x="342" y="88" font-family="sans-serif" font-size="11" fill="#f87171">Single Wall of Inputs</text>
+        <text x="575" y="88" font-family="sans-serif" font-size="11" font-weight="bold" fill="#ef4444">+68% Hesitation</text>
+      </g>
+
+      <!-- Key Insights Summary Grid -->
+      <g transform="translate(25, 345)">
+        <rect width="310" height="135" rx="12" fill="#27272a" />
+        <text x="20" y="30" font-family="sans-serif" font-size="12" font-weight="bold" fill="#60a5fa">💡 Key Research Takeaways</text>
+        <text x="20" y="55" font-family="sans-serif" font-size="10.5" fill="#e4e4e7">• Thumb-friendly 48px target minimum reduces mis-taps by 65%</text>
+        <text x="20" y="78" font-family="sans-serif" font-size="10.5" fill="#e4e4e7">• Chunking checkout steps into 3 phases preserves user momentum</text>
+        <text x="20" y="101" font-family="sans-serif" font-size="10.5" fill="#e4e4e7">• Visual confirmation triggers peak-end emotional reassurance</text>
+      </g>
+
+      <g transform="translate(360, 345)">
+        <rect width="310" height="135" rx="12" fill="#27272a" />
+        <text x="20" y="30" font-family="sans-serif" font-size="12" font-weight="bold" fill="#34d399">🎯 Redesign Architecture Impact</text>
+        <text x="20" y="55" font-family="sans-serif" font-size="10.5" fill="#e4e4e7">• Formulated 10 UX guidelines implemented in Umang's apps</text>
+        <text x="20" y="78" font-family="sans-serif" font-size="10.5" fill="#e4e4e7">• Documented heuristic scorecard for cross-platform auditing</text>
+        <text x="20" y="101" font-family="sans-serif" font-size="10.5" fill="#e4e4e7">• Full design system tokens verified against WCAG AA standards</text>
+      </g>
+    </g>
+  </g>
+</svg>
+`)}`;
+

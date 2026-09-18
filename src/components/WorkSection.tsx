@@ -67,7 +67,7 @@ export const WorkSection: React.FC<WorkSectionProps> = ({ onSelectProject }) => 
                   />
                   <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                     <span className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white/95 text-neutral-950 text-xs font-semibold backdrop-blur-sm shadow-md">
-                      Read Case Study <ArrowUpRight className="w-3.5 h-3.5" />
+                      View Process <ArrowUpRight className="w-3.5 h-3.5" />
                     </span>
                   </div>
 
@@ -93,20 +93,26 @@ export const WorkSection: React.FC<WorkSectionProps> = ({ onSelectProject }) => 
                     </p>
                   </div>
 
-                  {/* Footer: View Case Study Link */}
-                  <div className="pt-4 border-t border-neutral-100 dark:border-neutral-800/80 flex items-center justify-between">
-                    <span className="text-xs font-mono text-neutral-400 dark:text-neutral-500">
-                      {project.timeline}
-                    </span>
-
+                  {/* Footer: Action Buttons */}
+                  <div className="pt-4 border-t border-neutral-100 dark:border-neutral-800/80 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
                     <button
-                      id={`view-project-btn-${project.id}`}
+                      id={`view-process-btn-${project.id}`}
                       onClick={() => onSelectProject(project)}
-                      className="inline-flex items-center gap-1 text-xs sm:text-sm font-semibold text-neutral-950 dark:text-white hover:underline underline-offset-4 cursor-pointer"
+                      className="inline-flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-semibold bg-neutral-100 dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100 hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-colors cursor-pointer"
                     >
-                      <span>View Case Study</span>
-                      <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                      <span>View Process</span>
                     </button>
+
+                    <a
+                      id={`view-behance-btn-${project.id}`}
+                      href={project.behanceUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-semibold bg-neutral-950 dark:bg-white text-white dark:text-neutral-950 hover:opacity-90 transition-opacity cursor-pointer shadow-xs"
+                    >
+                      <span>Full Case Study</span>
+                      <ArrowUpRight className="w-3.5 h-3.5" />
+                    </a>
                   </div>
                 </div>
               </motion.div>
