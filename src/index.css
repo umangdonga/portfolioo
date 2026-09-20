@@ -41,6 +41,24 @@
   background-size: 32px 32px;
 }
 
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-33.333%);
+  }
+}
+
+@keyframes marquee-reverse {
+  0% {
+    transform: translateX(-33.333%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
 /* Sevora corner plus markers */
 .corner-plus::before {
   content: "+";

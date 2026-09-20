@@ -1379,3 +1379,243 @@ export const UX_LAWS_ANALYSIS_SVG = `data:image/svg+xml;utf8,${encodeURIComponen
 </svg>
 `)}`;
 
+export const UMANG_DEFAULT_PORTRAIT_SVG = `data:image/svg+xml;utf8,${encodeURIComponent(`
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" height="100%">
+  <defs>
+    <!-- Backgrounds & Gradients -->
+    <linearGradient id="wallBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f7f5ed" />
+      <stop offset="100%" stop-color="#eee9dd" />
+    </linearGradient>
+    <linearGradient id="sageBlob" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d3e0d2" />
+      <stop offset="100%" stop-color="#c1d2c0" />
+    </linearGradient>
+    <linearGradient id="skin" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f0b98f" />
+      <stop offset="60%" stop-color="#e3a77b" />
+      <stop offset="100%" stop-color="#d39264" />
+    </linearGradient>
+    <linearGradient id="blazer" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2a2a30" />
+      <stop offset="50%" stop-color="#1b1b20" />
+      <stop offset="100%" stop-color="#101014" />
+    </linearGradient>
+    <linearGradient id="laptopLid" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#404652" />
+      <stop offset="100%" stop-color="#272c35" />
+    </linearGradient>
+    <linearGradient id="deskWood" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ebe4d5" />
+      <stop offset="100%" stop-color="#dfd7c5" />
+    </linearGradient>
+  </defs>
+
+  <!-- 1. Canvas Background -->
+  <rect width="600" height="600" fill="url(#wallBg)" />
+
+  <!-- 2. Organic Sage-Green Blob Backdrop -->
+  <path d="M160 380 C120 320 140 210 210 160 C280 110 380 120 440 180 C500 240 510 330 450 390 C400 440 320 450 240 430 C190 420 170 400 160 380 Z" fill="url(#sageBlob)" opacity="0.85" />
+
+  <!-- 3. Upper Left Doodles & Handwritten Note: "Better Experiences for Real People" -->
+  <g id="leftDoodle" stroke="#3b483b" stroke-linecap="round">
+    <!-- Lightbulb -->
+    <path d="M125 105 C115 105 108 115 108 124 C108 132 113 138 116 142 L116 150 L134 150 L134 142 C137 138 142 132 142 124 C142 115 135 105 125 105 Z" fill="#fff9db" stroke-width="2.2" />
+    <path d="M118 150 L132 150 L130 156 L120 156 Z" fill="#cfcfc4" stroke-width="1.8" />
+    <path d="M120 125 L124 133 L126 133 L130 125" fill="none" stroke-width="1.8" />
+    <!-- Rays -->
+    <line x1="125" y1="94" x2="125" y2="86" stroke-width="2" />
+    <line x1="106" y1="102" x2="100" y2="96" stroke-width="2" />
+    <line x1="144" y1="102" x2="150" y2="96" stroke-width="2" />
+    <line x1="96" y1="124" x2="88" y2="124" stroke-width="2" />
+    <line x1="154" y1="124" x2="162" y2="124" stroke-width="2" />
+
+    <!-- Handwritten text -->
+    <text x="75" y="195" font-family="'Caveat', 'Comic Sans MS', cursive, sans-serif" font-size="21" font-weight="bold" fill="#3b483b" transform="rotate(-10 75 195)">Better</text>
+    <text x="70" y="222" font-family="'Caveat', 'Comic Sans MS', cursive, sans-serif" font-size="20" font-weight="bold" fill="#3b483b" transform="rotate(-10 70 222)">Experiences</text>
+    <text x="80" y="246" font-family="'Caveat', 'Comic Sans MS', cursive, sans-serif" font-size="18" font-weight="bold" fill="#3b483b" transform="rotate(-10 80 246)">for Real</text>
+    <text x="85" y="270" font-family="'Caveat', 'Comic Sans MS', cursive, sans-serif" font-size="21" font-weight="bold" fill="#3b483b" transform="rotate(-10 85 270)">People</text>
+  </g>
+
+  <!-- 4. Upper Right Doodles & Handwritten Note: "Design Research Build Iterate" -->
+  <g id="rightDoodle" stroke="#3b483b" stroke-linecap="round">
+    <!-- Paper Airplane -->
+    <g transform="translate(505, 290) rotate(-15)">
+      <polygon points="0,0 28,-14 38,16 18,10" fill="#ffffff" stroke="#3b483b" stroke-width="2" />
+      <polygon points="0,0 38,16 16,5" fill="#f0f4f0" stroke="#3b483b" stroke-width="1.8" />
+      <path d="M-6,24 C-15,30 -25,24 -20,15 C-15,6 -2,8 5,0" fill="none" stroke="#3b483b" stroke-width="1.6" stroke-dasharray="3,3" />
+    </g>
+
+    <!-- Handwritten text -->
+    <text x="500" y="210" font-family="'Caveat', 'Comic Sans MS', cursive, sans-serif" font-size="20" font-weight="bold" fill="#3b483b" transform="rotate(8 500 210)">Design</text>
+    <text x="495" y="235" font-family="'Caveat', 'Comic Sans MS', cursive, sans-serif" font-size="20" font-weight="bold" fill="#3b483b" transform="rotate(8 495 235)">Research</text>
+    <text x="502" y="260" font-family="'Caveat', 'Comic Sans MS', cursive, sans-serif" font-size="20" font-weight="bold" fill="#3b483b" transform="rotate(8 502 260)">Build</text>
+    <text x="498" y="285" font-family="'Caveat', 'Comic Sans MS', cursive, sans-serif" font-size="20" font-weight="bold" fill="#3b483b" transform="rotate(8 498 285)">Iterate</text>
+  </g>
+
+  <!-- 5. Body & Attire (Umang) -->
+  <g id="characterBody">
+    <!-- Shoulders & Torso -->
+    <path d="M120 520 L150 370 C165 310 205 295 255 295 C305 295 345 310 365 370 L480 430 L490 520 Z" fill="url(#blazer)" />
+
+    <!-- Inner Black Crewneck T-Shirt -->
+    <path d="M235 285 Q280 325 325 285 L335 370 Q280 395 225 370 Z" fill="#121215" />
+
+    <!-- Left Blazer Lapel -->
+    <path d="M185 340 L235 285 L260 405 L230 520 L170 520 Z" fill="#202026" stroke="#121215" stroke-width="1.5" />
+    <!-- Right Blazer Lapel -->
+    <path d="M375 340 L325 285 L300 405 L330 520 L390 520 Z" fill="#202026" stroke="#121215" stroke-width="1.5" />
+
+    <!-- Neck -->
+    <path d="M255 240 L255 295 Q280 312 305 295 L305 240 Z" fill="#d39264" />
+    <path d="M255 240 Q280 260 305 240" fill="#c37e50" opacity="0.6" />
+  </g>
+
+  <!-- 6. Head & Facial Features -->
+  <g id="characterHead">
+    <!-- Ears -->
+    <path d="M205 185 C195 185 195 220 210 225 Z" fill="#dfa275" />
+    <path d="M355 185 C365 185 365 220 350 225 Z" fill="#dfa275" />
+
+    <!-- Face Shape -->
+    <path d="M210 170 C210 115 350 115 350 170 C350 235 320 268 280 268 C240 268 210 235 210 170 Z" fill="url(#skin)" />
+
+    <!-- Hair (Styled Modern Volume with Texture) -->
+    <path d="M205 160 C205 110 235 80 280 80 C325 80 355 105 355 160 C350 135 330 118 310 112 C285 105 250 106 220 124 C212 130 208 144 205 160 Z" fill="#141416" />
+    <!-- Hair Strands & Texture -->
+    <path d="M225 125 C240 100 270 90 300 90 C330 90 350 105 352 135 C340 118 318 112 285 112 C255 112 238 122 225 125 Z" fill="#24242a" />
+    <path d="M260 90 Q285 75 315 88" stroke="#32323c" stroke-width="2" fill="none" stroke-linecap="round" />
+    <path d="M235 110 Q255 95 285 100" stroke="#32323c" stroke-width="2" fill="none" stroke-linecap="round" />
+
+    <!-- Eyebrows -->
+    <path d="M228 172 Q246 166 260 172" fill="none" stroke="#18181b" stroke-width="3.5" stroke-linecap="round" />
+    <path d="M300 172 Q314 166 332 172" fill="none" stroke="#18181b" stroke-width="3.5" stroke-linecap="round" />
+
+    <!-- Glasses (Stylish Black Rectangular Frames) -->
+    <!-- Left Lens -->
+    <rect x="220" y="174" width="46" height="34" rx="7" fill="#ffffff" fill-opacity="0.12" stroke="#18181c" stroke-width="3.2" />
+    <!-- Right Lens -->
+    <rect x="294" y="174" width="46" height="34" rx="7" fill="#ffffff" fill-opacity="0.12" stroke="#18181c" stroke-width="3.2" />
+    <!-- Glasses Bridge -->
+    <path d="M266 186 Q280 182 294 186" fill="none" stroke="#18181c" stroke-width="3.2" stroke-linecap="round" />
+    <!-- Glasses Temples -->
+    <line x1="220" y1="184" x2="204" y2="182" stroke="#18181c" stroke-width="2.8" stroke-linecap="round" />
+    <line x1="340" y1="184" x2="356" y2="182" stroke="#18181c" stroke-width="2.8" stroke-linecap="round" />
+    <!-- Subtle Lens Reflection Glints -->
+    <line x1="226" y1="180" x2="242" y2="180" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" opacity="0.75" />
+    <line x1="300" y1="180" x2="316" y2="180" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" opacity="0.75" />
+
+    <!-- Eyes (Warm & Confident) -->
+    <ellipse cx="243" cy="191" rx="5.5" ry="4.5" fill="#18181b" />
+    <circle cx="245" cy="189.5" r="1.8" fill="#ffffff" />
+    <ellipse cx="317" cy="191" rx="5.5" ry="4.5" fill="#18181b" />
+    <circle cx="319" cy="189.5" r="1.8" fill="#ffffff" />
+
+    <!-- Nose -->
+    <path d="M280 186 L280 215 Q280 222 274 222 Q280 225 286 222" fill="none" stroke="#ba7a57" stroke-width="2.6" stroke-linecap="round" />
+
+    <!-- Smile -->
+    <path d="M260 238 Q280 252 300 238" fill="none" stroke="#995738" stroke-width="3.2" stroke-linecap="round" />
+    <path d="M264 238 Q280 247 296 238" fill="#ffffff" opacity="0.85" />
+  </g>
+
+  <!-- 7. Left Arm & Hand Holding Stylus Under Chin -->
+  <g id="handPose">
+    <!-- Forearm / Sleeve -->
+    <path d="M210 470 L250 340 L280 340 L240 480 Z" fill="#1b1b20" />
+    <!-- Hand / Knuckles Supporting Chin -->
+    <path d="M260 300 C250 275 270 260 285 270 C295 278 290 295 275 305 Z" fill="#e3a77b" stroke="#cf8f60" stroke-width="1.5" />
+    <ellipse cx="268" cy="275" rx="7" ry="9" fill="#e3a77b" transform="rotate(-15 268 275)" />
+    <!-- Digital Stylus Pen -->
+    <line x1="242" y1="285" x2="295" y2="235" stroke="#121215" stroke-width="5" stroke-linecap="round" />
+    <line x1="295" y1="235" x2="300" y2="230" stroke="#f1f5f9" stroke-width="3" stroke-linecap="round" />
+  </g>
+
+  <!-- 8. Modern Minimalist Desk Surface -->
+  <g id="deskForeground">
+    <rect x="0" y="475" width="600" height="125" fill="url(#deskWood)" />
+    <line x1="0" y1="475" x2="600" y2="475" stroke="#d5ccb8" stroke-width="2" />
+  </g>
+
+  <!-- 9. Stack of 3 Books on Left: UX RESEARCH, UI DESIGN, BRAND & PRODUCT -->
+  <g id="bookStack" transform="translate(20, 410)">
+    <!-- Bottom Book: BRAND & PRODUCT (Black) -->
+    <rect x="0" y="60" width="135" height="24" rx="4" fill="#141416" stroke="#25252b" stroke-width="1.2" />
+    <rect x="4" y="62" width="12" height="20" rx="2" fill="#23232a" />
+    <text x="32" y="76" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="bold" fill="#ffffff" letter-spacing="0.5">BRAND &amp; PRODUCT</text>
+
+    <!-- Middle Book: UI DESIGN (Slate / Dark Grey) -->
+    <rect x="5" y="34" width="130" height="23" rx="4" fill="#2c3440" stroke="#3b4452" stroke-width="1.2" />
+    <rect x="9" y="36" width="12" height="19" rx="2" fill="#3a4556" />
+    <text x="36" y="50" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="bold" fill="#ffffff" letter-spacing="0.5">UI DESIGN</text>
+
+    <!-- Top Book: UX RESEARCH (Forest / Sage Green) -->
+    <rect x="10" y="8" width="125" height="23" rx="4" fill="#2d4a3e" stroke="#3b5e4f" stroke-width="1.2" />
+    <rect x="14" y="10" width="12" height="19" rx="2" fill="#3c6353" />
+    <text x="34" y="24" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="bold" fill="#ffffff" letter-spacing="0.5">UX RESEARCH</text>
+  </g>
+
+  <!-- 10. Ceramic Mug with Peacock Feather Motif -->
+  <g id="mug" transform="translate(165, 435)">
+    <!-- Mug Body -->
+    <rect x="15" y="0" width="46" height="52" rx="7" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" />
+    <!-- Mug Handle -->
+    <path d="M15 12 C4 12 4 40 15 40" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" />
+    <path d="M15 12 C4 12 4 40 15 40" fill="none" stroke="#cbd5e1" stroke-width="2" stroke-linecap="round" />
+    <!-- Peacock Feather Emblem on Mug -->
+    <path d="M38 16 C30 20 28 32 38 38 C48 32 46 20 38 16 Z" fill="#0d9488" />
+    <circle cx="38" cy="27" r="5" fill="#0284c7" />
+    <circle cx="38" cy="27" r="2.5" fill="#eab308" />
+    <line x1="38" y1="38" x2="38" y2="44" stroke="#0d9488" stroke-width="1.5" />
+  </g>
+
+  <!-- 11. Graphic Drawing Tablet -->
+  <g id="drawingTablet" transform="translate(100, 500)">
+    <rect x="0" y="0" width="165" height="42" rx="8" fill="#1c1d22" stroke="#2a2b32" stroke-width="1.5" />
+    <!-- Active Drawing Area -->
+    <rect x="25" y="6" width="130" height="30" rx="4" fill="#121316" />
+    <circle cx="12" cy="14" r="3" fill="#383a42" />
+    <circle cx="12" cy="28" r="3" fill="#383a42" />
+  </g>
+
+  <!-- 12. Sleek Laptop with Figma Logo on Lid -->
+  <g id="laptop" transform="translate(255, 360)">
+    <!-- Angled Laptop Display Lid -->
+    <polygon points="25,0 265,0 245,150 5,150" fill="url(#laptopLid)" stroke="#22262d" stroke-width="2" />
+    <polygon points="30,5 260,5 242,145 10,145" fill="#353b47" opacity="0.3" />
+
+    <!-- Figma Logo Mark on Laptop Back Lid -->
+    <g transform="translate(130, 68) scale(0.9)">
+      <!-- Top-left orange-red -->
+      <path d="M0,0 C0,-6.6 5.4,-12 12,-12 C18.6,-12 24,-6.6 24,0 C24,6.6 18.6,12 12,12 L0,12 Z" fill="#f24e1e" />
+      <!-- Top-right purple -->
+      <circle cx="36" cy="0" r="12" fill="#ff7262" />
+      <!-- Middle-left purple -->
+      <path d="M0,24 C0,17.4 5.4,12 12,12 C18.6,12 24,17.4 24,24 C24,30.6 18.6,36 12,36 L0,36 Z" fill="#a259ff" />
+      <!-- Middle-right blue -->
+      <circle cx="36" cy="24" r="12" fill="#1abcfe" />
+      <!-- Bottom-left green -->
+      <path d="M0,48 C0,41.4 5.4,36 12,36 L24,36 L24,48 C24,54.6 18.6,60 12,60 C5.4,60 0,54.6 0,48 Z" fill="#0acf83" />
+    </g>
+
+    <!-- Laptop Base / Hinge -->
+    <polygon points="0,150 250,150 270,165 -20,165" fill="#1b1e24" stroke="#121418" stroke-width="1" />
+  </g>
+
+  <!-- 13. Potted Green Desk Plant on Far Right -->
+  <g id="plant" transform="translate(525, 415)">
+    <!-- Ceramic Planter Pot -->
+    <polygon points="12,50 48,50 42,90 18,90" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" />
+    <!-- Soil -->
+    <ellipse cx="30" cy="50" rx="18" ry="4" fill="#583f33" />
+    <!-- Leaves -->
+    <path d="M30 48 Q20 30 10 20 Q25 25 30 48" fill="#4ade80" stroke="#16a34a" stroke-width="1" />
+    <path d="M30 48 Q40 28 52 18 Q38 25 30 48" fill="#22c55e" stroke="#15803d" stroke-width="1" />
+    <path d="M30 48 Q30 18 28 0 Q36 15 30 48" fill="#16a34a" stroke="#14532d" stroke-width="1" />
+    <path d="M30 48 Q10 40 -5 32 Q15 42 30 48" fill="#86efac" stroke="#16a34a" stroke-width="1" />
+    <path d="M30 48 Q48 40 65 32 Q45 42 30 48" fill="#15803d" stroke="#14532d" stroke-width="1" />
+  </g>
+</svg>
+`)}`;
+
+

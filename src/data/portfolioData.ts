@@ -33,8 +33,15 @@ export const PERSONAL_INFO = {
     behance: 'https://behance.net/umangdonga',
     github: 'https://github.com/umangdonga'
   },
-  portraitImage: '/Gemini_Generated_Image_t4w9bpt4w9bpt4w9-removebg-preview.png',
-  fallbackPortrait: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1000&q=80'
+  portraitImage: '/about-illustration.svg',
+  portraitCandidates: [
+    '/ChatGPT Image Sep 20, 2026, 01_31_50 PM.png',
+    '/ChatGPT_Image_Sep_20_2026_01_31_50_PM.png',
+    '/about-illustration.svg',
+    '/about-me.svg',
+    '/ChatGPT Image Sep 20, 2026, 01_31_50 PM.svg',
+    '/about-illustration.png'
+  ]
 };
 
 export const SKILL_CARDS: SkillCard[] = [

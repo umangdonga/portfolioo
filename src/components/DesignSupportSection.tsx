@@ -71,11 +71,6 @@ export const DesignSupportSection: React.FC = () => {
                   {point.details}
                 </p>
               </div>
-
-              <div className="pt-6 mt-6 border-t border-neutral-100 dark:border-neutral-800 flex items-center justify-between text-xs text-neutral-400">
-                <span>Value Driver</span>
-                <span className="font-mono text-neutral-900 dark:text-white">Empathy & Intent</span>
-              </div>
             </motion.div>
           ))}
         </div>

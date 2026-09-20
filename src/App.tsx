@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Navbar } from './components/Navbar';
 import { HeroSection } from './components/HeroSection';
 import { SkillsSection } from './components/SkillsSection';
-import { DesignHighlights } from './components/DesignHighlights';
 import { WorkSection } from './components/WorkSection';
 import { ProcessSection } from './components/ProcessSection';
 import { DesignSupportSection } from './components/DesignSupportSection';
@@ -15,38 +14,40 @@ import { CertificateModal } from './components/CertificateModal';
 import { Project, Certification } from './types';
 
 export default function App() {
-  // Default theme is light mode as requested in user prompt
-  const [darkMode, setDarkMode] = useState<boolean>(() => {
-    const saved = localStorage.getItem('theme');
-    if (saved) return saved === 'dark';
-    return false; // Default: Light mode
-  });
-
   const [activeSection, setActiveSection] = useState<string>('home');
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [selectedCert, setSelectedCert] = useState<Certification | null>(null);
   const [resumeOpen, setResumeOpen] = useState<boolean>(false);
 
-  // Sync dark class on document element
+  // Initialize theme from localStorage or default to system/dark
   useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
-    } else {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'light') {
       document.documentElement.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
+    } else {
+      document.documentElement.classList.add('dark');
     }
-  }, [darkMode]);
+  }, []);
 
   // Track active section on scroll
   useEffect(() => {
-    const sections = ['home', 'about', 'skills', 'highlights', 'work', 'process', 'philosophy', 'tools', 'certifications', 'contact'];
+    const sections = [
+      'home',
+      'skills',
+      'work',
+      'process',
+      'philosophy',
+      'tools',
+      'certifications',
+      'contact'
+    ];
+
     const handleScroll = () => {
       const scrollY = window.scrollY;
       for (const sectionId of sections) {
         const el = document.getElementById(sectionId);
         if (el) {
-          const top = el.offsetTop - 120;
+          const top = el.offsetTop - 140;
           const height = el.offsetHeight;
           if (scrollY >= top && scrollY < top + height) {
             setActiveSection(sectionId);
@@ -63,7 +64,7 @@ export default function App() {
   const scrollToSection = (sectionId: string) => {
     const el = document.getElementById(sectionId);
     if (el) {
-      const navOffset = 80;
+      const navOffset = 85;
       const elementPosition = el.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - navOffset;
       window.scrollTo({
@@ -74,49 +75,44 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-white text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100 selection:bg-neutral-900 selection:text-white dark:selection:bg-white dark:selection:text-neutral-950 transition-colors duration-300 flex flex-col font-sans">
-      {/* 1. Navigation Bar */}
+    <div className="min-h-screen bg-white text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100 flex flex-col font-sans antialiased selection:bg-neutral-900 selection:text-white dark:selection:bg-white dark:selection:text-neutral-950 transition-colors duration-300">
+      {/* 1. Primary Navigation Bar with Theme & Resume Controls */}
       <Navbar
-        darkMode={darkMode}
-        setDarkMode={setDarkMode}
         onOpenResume={() => setResumeOpen(true)}
         activeSection={activeSection}
       />
 
-      {/* Main Content Area */}
+      {/* Main Content Sections */}
       <main className="flex-grow">
-        {/* 2. Hero + About Section */}
+        {/* 2. Hero Section: Umang Donga, UI/UX Designer & M.Des Student */}
         <HeroSection
           onScrollToWork={() => scrollToSection('work')}
           onScrollToContact={() => scrollToSection('contact')}
         />
 
-        {/* 3. Skills Section */}
+        {/* 3. Capabilities & Focus: 4 Skills Cards */}
         <SkillsSection />
 
-        {/* 4. Design Highlights Carousel */}
-        <DesignHighlights />
-
-        {/* 5. My Work (6 Projects Grid) */}
+        {/* 4. Selected Work: 5 Case Studies with Filters */}
         <WorkSection onSelectProject={(project) => setSelectedProject(project)} />
 
-        {/* 6. Design Process (4 Connected Steps) */}
+        {/* 5. Methodology: 4-Step Design Process */}
         <ProcessSection />
 
-        {/* 7. Design Support Section (Philosophy) */}
+        {/* 6. Design Philosophy: 3 Pillars (Understand, Simplify, Design) */}
         <DesignSupportSection />
 
-        {/* 8. Tools I Work With (Figma, Canva, CorelDRAW, Ai, Ps, Framer) */}
+        {/* 7. Tools & Technologies: Figma, Canva, CorelDRAW, Adobe Illustrator, Adobe Photoshop, Framer */}
         <ToolsSection />
 
-        {/* 9. Certifications (4 Certificate Cards) */}
+        {/* 8. Certifications: 4 Verified Credentials */}
         <CertificationsSection onSelectCert={(cert) => setSelectedCert(cert)} />
 
-        {/* 10. Get In Touch (CTA & Inquiry) */}
+        {/* 9. Let's Connect: Direct Contact & Inquiry Form */}
         <ContactSection onOpenResume={() => setResumeOpen(true)} />
       </main>
 
-      {/* Modals */}
+      {/* Interactive Modals */}
       <ProjectModal
         project={selectedProject}
         onClose={() => setSelectedProject(null)}

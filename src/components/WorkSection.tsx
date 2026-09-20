@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, Eye } from 'lucide-react';
 import { PROJECTS } from '../data/portfolioData';
 import { Project } from '../types';
 
@@ -9,116 +9,123 @@ interface WorkSectionProps {
 }
 
 export const WorkSection: React.FC<WorkSectionProps> = ({ onSelectProject }) => {
+  const [showAll, setShowAll] = useState<boolean>(false);
+  const displayedProjects = showAll ? PROJECTS : PROJECTS.slice(0, 4);
+
   return (
     <section
       id="work"
-      className="py-20 lg:py-28 border-t border-neutral-200 dark:border-neutral-800 relative"
+      className="py-20 lg:py-28 border-t border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-950 transition-colors duration-300"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 sm:mb-12 gap-6">
-          <div className="max-w-2xl">
-            <div className="flex items-center gap-3 mb-3">
-              <span className="w-2 h-2 rounded-full bg-neutral-900 dark:bg-white" />
-              <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-neutral-500 dark:text-neutral-400 font-mono">
-                Selected Works
-              </span>
-            </div>
-            <h2
-              id="work-heading"
-              className="text-2xl sm:text-3xl lg:text-4xl font-bold text-neutral-950 dark:text-white font-display tracking-tight"
-            >
-              My Work
-            </h2>
-            <p className="mt-2 text-base text-neutral-600 dark:text-neutral-400 leading-relaxed">
-              Selected projects exploring product design, UI/UX, research, interaction, and visual design.
-            </p>
+        <div className="max-w-2xl mb-12 sm:mb-16">
+          <div className="flex items-center gap-3 mb-3">
+            <span className="w-2 h-2 rounded-full bg-neutral-900 dark:bg-white" />
+            <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-neutral-500 dark:text-neutral-400 font-mono">
+              Selected Work
+            </span>
           </div>
 
-          <span className="text-xs font-mono px-3 py-1.5 rounded-full border border-neutral-200 dark:border-neutral-800 text-neutral-500 self-start md:self-end">
-            {PROJECTS.length} Projects
-          </span>
+          <h2
+            id="work-heading"
+            className="text-2xl sm:text-3xl lg:text-4xl font-bold text-neutral-950 dark:text-white font-display tracking-tight"
+          >
+            Featured Projects
+          </h2>
+          <p className="mt-2 text-base sm:text-lg text-neutral-600 dark:text-neutral-400">
+            Thoughtful digital experiences, heuristic analyses, and mobile products designed around real user needs.
+          </p>
         </div>
 
-        {/* 6 Project Cards Grid (3 per row on desktop) */}
-        <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* 2-Column Projects Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10">
           <AnimatePresence mode="popLayout">
-            {PROJECTS.map((project) => (
+            {displayedProjects.map((project, idx) => (
               <motion.div
-                layout
                 key={project.id}
                 id={`project-card-${project.id}`}
-                initial={{ opacity: 0, scale: 0.96 }}
-                animate={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.96 }}
-                transition={{ duration: 0.35 }}
-                className="group flex flex-col rounded-2xl sm:rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900/40 overflow-hidden hover:border-neutral-400 dark:hover:border-neutral-600 transition-all duration-300 shadow-xs hover:shadow-xl"
+                transition={{ duration: 0.4, delay: idx * 0.08 }}
+                className="group flex flex-col rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900/40 overflow-hidden hover:border-neutral-400 dark:hover:border-neutral-600 transition-all duration-300 shadow-xs hover:shadow-xl justify-between"
               >
-                {/* Large Project Image with Interactive Zoom Hover Effect */}
+                {/* Project Image Preview Canvas */}
                 <div
                   onClick={() => onSelectProject(project)}
-                  className="aspect-[16/11] w-full overflow-hidden relative bg-neutral-100 dark:bg-neutral-800 cursor-pointer"
+                  className="aspect-[16/10] w-full overflow-hidden relative bg-neutral-100 dark:bg-neutral-900 cursor-pointer border-b border-neutral-200 dark:border-neutral-800/80"
                 >
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-105"
+                    referrerPolicy="no-referrer"
+                    className="w-full h-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-103"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <span className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white/95 text-neutral-950 text-xs font-semibold backdrop-blur-sm shadow-md">
-                      View Process <ArrowUpRight className="w-3.5 h-3.5" />
+
+                  {/* Hover Floating Action */}
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-black/40 backdrop-blur-xs">
+                    <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white text-neutral-950 text-xs font-bold font-mono tracking-wider shadow-xl hover:scale-105 transition-transform">
+                      <Eye className="w-4 h-4" /> View Case Study
                     </span>
                   </div>
 
-                  {/* Category Tag Pill */}
-                  <div className="absolute top-4 left-4">
-                    <span className="px-3 py-1 rounded-full text-xs font-medium bg-white/95 dark:bg-neutral-950/85 backdrop-blur-md text-neutral-900 dark:text-neutral-100 border border-neutral-200/60 dark:border-neutral-800/60 shadow-xs">
-                      {project.category}
-                    </span>
+                  {/* Top Badge: Timeline */}
+                  <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-white/90 dark:bg-neutral-950/90 backdrop-blur-md border border-neutral-200 dark:border-neutral-800 text-[11px] font-mono text-neutral-700 dark:text-neutral-300 shadow-xs">
+                    {project.timeline}
                   </div>
                 </div>
 
-                {/* Card Body */}
-                <div className="p-6 sm:p-7 flex flex-col flex-grow justify-between">
+                {/* Project Meta & Information */}
+                <div className="p-6 sm:p-7 flex flex-col justify-between flex-1">
                   <div>
-                    <h3
-                      onClick={() => onSelectProject(project)}
-                      className="text-lg sm:text-xl font-bold text-neutral-950 dark:text-white font-display mb-2 group-hover:text-neutral-600 dark:group-hover:text-neutral-300 cursor-pointer transition-colors"
-                    >
-                      {project.title}
-                    </h3>
-                    <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed mb-4">
+                    <div className="flex items-center gap-2 text-xs font-mono text-neutral-500 dark:text-neutral-400 mb-2">
+                      <span className="font-semibold text-neutral-800 dark:text-neutral-200">
+                        {project.category}
+                      </span>
+                    </div>
+
+                    <div className="flex items-start justify-between gap-3 mb-3">
+                      <h3
+                        onClick={() => onSelectProject(project)}
+                        className="text-lg sm:text-xl font-bold text-neutral-950 dark:text-white font-display hover:underline cursor-pointer"
+                      >
+                        {project.title}
+                      </h3>
+                      <button
+                        onClick={() => onSelectProject(project)}
+                        className="p-2 rounded-full bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 group-hover:bg-neutral-950 dark:group-hover:bg-white group-hover:text-white dark:group-hover:text-neutral-950 transition-colors shrink-0 cursor-pointer"
+                        title="View Case Study"
+                      >
+                        <ArrowUpRight className="w-4 h-4" />
+                      </button>
+                    </div>
+
+                    <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 font-sans line-clamp-2 leading-relaxed">
                       {project.description}
                     </p>
-                  </div>
-
-                  {/* Footer: Action Buttons */}
-                  <div className="pt-4 border-t border-neutral-100 dark:border-neutral-800/80 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
-                    <button
-                      id={`view-process-btn-${project.id}`}
-                      onClick={() => onSelectProject(project)}
-                      className="inline-flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-semibold bg-neutral-100 dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100 hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-colors cursor-pointer"
-                    >
-                      <span>View Process</span>
-                    </button>
-
-                    <a
-                      id={`view-behance-btn-${project.id}`}
-                      href={project.behanceUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-semibold bg-neutral-950 dark:bg-white text-white dark:text-neutral-950 hover:opacity-90 transition-opacity cursor-pointer shadow-xs"
-                    >
-                      <span>Full Case Study</span>
-                      <ArrowUpRight className="w-3.5 h-3.5" />
-                    </a>
                   </div>
                 </div>
               </motion.div>
             ))}
           </AnimatePresence>
-        </motion.div>
+        </div>
+
+        {/* Explore All Toggle Button */}
+        {PROJECTS.length > 4 && (
+          <div className="mt-12 sm:mt-14 text-center">
+            <button
+              onClick={() => setShowAll(!showAll)}
+              className="inline-flex items-center gap-2 px-7 py-3 rounded-full bg-neutral-100 dark:bg-neutral-900 hover:bg-neutral-200 dark:hover:bg-neutral-800 text-neutral-900 dark:text-white font-mono text-xs uppercase tracking-wider font-semibold border border-neutral-300 dark:border-neutral-700 transition-all duration-200 cursor-pointer shadow-xs"
+            >
+              <span>{showAll ? 'Show Fewer Projects' : 'Explore All Projects'}</span>
+              <ArrowUpRight className="w-4 h-4" />
+            </button>
+          </div>
+        )}
+
       </div>
     </section>
   );
