@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" width="100%" height="100%">
+  <defs>
+    <pattern id="guillochePattern3" width="100" height="100" patternUnits="userSpaceOnUse">
+      <path d="M0,50 Q25,25 50,50 T100,50" fill="none" stroke="#f0efe8" stroke-width="1" />
+      <path d="M0,25 Q25,50 50,25 T100,25" fill="none" stroke="#f5f4ed" stroke-width="0.8" />
+      <path d="M0,75 Q25,100 50,75 T100,75" fill="none" stroke="#f5f4ed" stroke-width="0.8" />
+    </pattern>
+  </defs>
+
+  <rect width="1000" height="700" fill="#ffffff" />
+  <rect width="1000" height="700" fill="url(#guillochePattern3)" opacity="0.6" />
+
+  <rect x="20" y="20" width="960" height="660" fill="none" stroke="#6b7280" stroke-width="3" />
+  <rect x="28" y="28" width="944" height="644" fill="none" stroke="#9ca3af" stroke-width="1" />
+  <rect x="20" y="20" width="14" height="14" fill="#6b7280" />
+  <rect x="966" y="20" width="14" height="14" fill="#6b7280" />
+  <rect x="20" y="666" width="14" height="14" fill="#6b7280" />
+  <rect x="966" y="666" width="14" height="14" fill="#6b7280" />
+
+  <!-- Right Side Coursera Grey Ribbon Banner -->
+  <g id="courseraRibbon">
+    <path d="M660,28 L890,28 L890,540 L775,605 L660,540 Z" fill="#e5e9ef" />
+    <path d="M660,28 L890,28 L890,540 L775,605 L660,540 Z" fill="none" stroke="#d1d5db" stroke-width="1.5" />
+    
+    <text x="775" y="145" font-family="'Inter', sans-serif" font-size="20" font-weight="600" fill="#111827" text-anchor="middle" letter-spacing="2">COURSE</text>
+    <text x="775" y="175" font-family="'Inter', sans-serif" font-size="20" font-weight="600" fill="#111827" text-anchor="middle" letter-spacing="2">CERTIFICATE</text>
+
+    <!-- Coursera Seal Badge -->
+    <g transform="translate(775, 430)">
+      <circle r="88" fill="#ffffff" stroke="#374151" stroke-width="3.5" />
+      <circle r="82" fill="none" stroke="#374151" stroke-width="1" stroke-dasharray="3,3" />
+      <circle r="68" fill="none" stroke="#374151" stroke-width="1.5" />
+
+      <path id="sealTop3" d="M-60,0 A60,60 0 0,1 60,0" fill="none" />
+      <text font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="bold" fill="#374151" letter-spacing="2">
+        <textPath href="#sealTop3" startOffset="50%" text-anchor="middle">· EDUCATION FOR EVERYONE ·</textPath>
+      </text>
+
+      <path id="sealBottom3" d="M-60,0 A60,60 0 0,0 60,0" fill="none" />
+      <text font-family="'JetBrains Mono', monospace" font-size="10" font-weight="bold" fill="#374151" letter-spacing="3">
+        <textPath href="#sealBottom3" startOffset="50%" text-anchor="middle">COURSE CERTIFICATE</textPath>
+      </text>
+
+      <text x="0" y="8" font-family="'Inter', sans-serif" font-size="22" font-weight="800" fill="#111827" text-anchor="middle" letter-spacing="-0.5">coursera</text>
+    </g>
+  </g>
+
+  <!-- Left Main Content Area -->
+  <!-- IBM Logo Vector -->
+  <g transform="translate(95, 120) scale(1.1)">
+    <!-- Letter I -->
+    <rect x="0" y="0" width="18" height="3" fill="#0f62fe" />
+    <rect x="0" y="6" width="18" height="3" fill="#0f62fe" />
+    <rect x="4.5" y="12" width="9" height="3" fill="#0f62fe" />
+    <rect x="4.5" y="18" width="9" height="3" fill="#0f62fe" />
+    <rect x="4.5" y="24" width="9" height="3" fill="#0f62fe" />
+    <rect x="4.5" y="30" width="9" height="3" fill="#0f62fe" />
+    <rect x="0" y="36" width="18" height="3" fill="#0f62fe" />
+    <rect x="0" y="42" width="18" height="3" fill="#0f62fe" />
+
+    <!-- Letter B -->
+    <rect x="23" y="0" width="35" height="3" fill="#0f62fe" />
+    <rect x="23" y="6" width="37" height="3" fill="#0f62fe" />
+    <rect x="23" y="12" width="9" height="3" fill="#0f62fe" />
+    <rect x="51" y="12" width="9" height="3" fill="#0f62fe" />
+    <rect x="23" y="18" width="36" height="3" fill="#0f62fe" />
+    <rect x="23" y="24" width="37" height="3" fill="#0f62fe" />
+    <rect x="23" y="30" width="9" height="3" fill="#0f62fe" />
+    <rect x="51" y="30" width="10" height="3" fill="#0f62fe" />
+    <rect x="23" y="36" width="38" height="3" fill="#0f62fe" />
+    <rect x="23" y="42" width="35" height="3" fill="#0f62fe" />
+
+    <!-- Letter M -->
+    <rect x="65" y="0" width="12" height="3" fill="#0f62fe" />
+    <rect x="88" y="0" width="8" height="3" fill="#0f62fe" />
+    <rect x="107" y="0" width="12" height="3" fill="#0f62fe" />
+    <rect x="65" y="6" width="12" height="3" fill="#0f62fe" />
+    <rect x="88" y="6" width="8" height="3" fill="#0f62fe" />
+    <rect x="107" y="6" width="12" height="3" fill="#0f62fe" />
+    <rect x="65" y="12" width="12" height="3" fill="#0f62fe" />
+    <rect x="85" y="12" width="14" height="3" fill="#0f62fe" />
+    <rect x="107" y="12" width="12" height="3" fill="#0f62fe" />
+    <rect x="65" y="18" width="12" height="3" fill="#0f62fe" />
+    <rect x="81" y="18" width="9" height="3" fill="#0f62fe" />
+    <rect x="94" y="18" width="9" height="3" fill="#0f62fe" />
+    <rect x="107" y="18" width="12" height="3" fill="#0f62fe" />
+    <rect x="65" y="24" width="12" height="3" fill="#0f62fe" />
+    <rect x="78" y="24" width="8" height="3" fill="#0f62fe" />
+    <rect x="98" y="24" width="8" height="3" fill="#0f62fe" />
+    <rect x="107" y="24" width="12" height="3" fill="#0f62fe" />
+    <rect x="65" y="30" width="12" height="3" fill="#0f62fe" />
+    <rect x="107" y="30" width="12" height="3" fill="#0f62fe" />
+    <rect x="65" y="36" width="14" height="3" fill="#0f62fe" />
+    <rect x="105" y="36" width="14" height="3" fill="#0f62fe" />
+    <rect x="65" y="42" width="14" height="3" fill="#0f62fe" />
+    <rect x="105" y="42" width="14" height="3" fill="#0f62fe" />
+  </g>
+
+  <!-- Issue Date -->
+  <text x="95" y="240" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="500" fill="#4b5563">Aug 4, 2026</text>
+
+  <!-- Recipient Name -->
+  <text x="95" y="295" font-family="'Georgia', serif" font-size="34" font-weight="400" fill="#1f2937" letter-spacing="1">DONGA UMANG HASHMUKHBHAI</text>
+
+  <!-- Statement -->
+  <text x="95" y="340" font-family="'Inter', sans-serif" font-size="13" fill="#6b7280">has successfully completed</text>
+
+  <!-- Course Title -->
+  <text x="95" y="388" font-family="'Georgia', serif" font-size="24" font-weight="600" fill="#111827">Generative AI: Prompt Engineering Basics</text>
+
+  <!-- Authorized By -->
+  <text x="95" y="425" font-family="'Inter', sans-serif" font-size="13" fill="#4b5563">an online course authorized by IBM and offered through Coursera</text>
+
+  <!-- Dual Signatures Area -->
+  <g transform="translate(95, 520)">
+    <!-- Antonio Cangiano Signature -->
+    <g>
+      <path d="M0,28 C10,12 25,5 35,28 C45,15 60,8 75,28 C90,20 110,25 130,22 C150,18 175,25 200,24" fill="none" stroke="#111827" stroke-width="2.5" stroke-linecap="round" />
+      <path d="M15,20 C35,4 65,30 90,14 C110,32 140,10 170,22" fill="none" stroke="#111827" stroke-width="2" stroke-linecap="round" />
+      <line x1="0" y1="42" x2="220" y2="42" stroke="#d1d5db" stroke-width="1" stroke-dasharray="2,2" />
+
+      <text x="0" y="58" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#374151">Antonio Cangiano</text>
+      <text x="0" y="72" font-family="'Inter', sans-serif" font-size="10" fill="#6b7280">Director, IBM Skills Network</text>
+    </g>
+
+    <!-- Rav Ahuja Signature -->
+    <g transform="translate(260, 0)">
+      <path d="M10,32 C5,15 20,10 32,25 C45,35 40,10 65,22 C80,30 110,12 135,26 C155,18 170,22 185,24" fill="none" stroke="#111827" stroke-width="2.5" stroke-linecap="round" />
+      <path d="M75,22 L140,24" stroke="#111827" stroke-width="2" />
+      <line x1="0" y1="42" x2="220" y2="42" stroke="#d1d5db" stroke-width="1" stroke-dasharray="2,2" />
+
+      <text x="0" y="58" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#374151">Rav Ahuja</text>
+      <text x="0" y="72" font-family="'Inter', sans-serif" font-size="10" fill="#6b7280">Global Program Director, Skills Network</text>
+    </g>
+  </g>
+
+  <!-- Verification Link & Coursera Footer -->
+  <g transform="translate(700, 605)">
+    <text x="240" y="0" font-family="'JetBrains Mono', monospace" font-size="11" fill="#4b5563" text-anchor="end">Verify at:</text>
+    <text x="240" y="18" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="600" fill="#2563eb" text-anchor="end">https://coursera.org/verify/871IFI00NBIM</text>
+    <text x="240" y="38" font-family="'Inter', sans-serif" font-size="10" fill="#6b7280" text-anchor="end">Coursera has confirmed the identity of this individual and their participation in the course.</text>
+  </g>
+
+  <!-- Bottom Legal Disclaimer -->
+  <text x="500" y="660" font-family="'Inter', sans-serif" font-size="9" fill="#9ca3af" text-anchor="middle">
+    This certificate attests to the learner's completion of an online course / project delivered via Coursera. It does not constitute formal enrollment at any university or entity and does not itself grant academic credit, grades, or a degree.
+  </text>
+</svg>

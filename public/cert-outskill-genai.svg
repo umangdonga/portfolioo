@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 625" width="100%" height="100%">
+  <defs>
+    <!-- Background Circle Matrix Pattern -->
+    <pattern id="outskillDots" width="80" height="80" patternUnits="userSpaceOnUse">
+      <circle cx="40" cy="40" r="28" fill="#132e13" opacity="0.4" />
+    </pattern>
+  </defs>
+
+  <!-- Dark Emerald Canvas -->
+  <rect width="1000" height="625" fill="#0b1e0d" />
+  <rect width="1000" height="625" fill="url(#outskillDots)" />
+
+  <!-- Left Neon Yellow Accent Bar -->
+  <rect x="0" y="0" width="18" height="625" fill="#c4ff00" />
+
+  <!-- Outskill Brand Logo -->
+  <g transform="translate(70, 70)">
+    <!-- 6 Dots (2 columns x 3 rows) -->
+    <circle cx="6" cy="6" r="4.5" fill="#a3e635" />
+    <circle cx="18" cy="6" r="4.5" fill="#a3e635" />
+    <circle cx="30" cy="6" r="4.5" fill="#a3e635" />
+    <circle cx="6" cy="18" r="4.5" fill="#a3e635" />
+    <circle cx="18" cy="18" r="4.5" fill="#a3e635" />
+    <circle cx="30" cy="18" r="4.5" fill="#a3e635" />
+
+    <text x="44" y="19" font-family="'Inter', sans-serif" font-size="28" font-weight="700" fill="#ffffff" letter-spacing="-0.5">Outskill</text>
+  </g>
+
+  <!-- Certificate of Completion Heading -->
+  <text x="70" y="180" font-family="'Georgia', serif" font-size="38" font-weight="400" fill="#ffffff" letter-spacing="0.5">Certificate of Completion</text>
+
+  <!-- Presentation line -->
+  <text x="70" y="240" font-family="'Inter', sans-serif" font-size="14" font-weight="500" fill="#a1a1aa">Proudly presented to</text>
+
+  <!-- Recipient Name -->
+  <text x="70" y="300" font-family="'Inter', sans-serif" font-size="36" font-weight="700" fill="#ffffff">Umang Donga</text>
+  <line x1="70" y1="318" x2="520" y2="318" stroke="#274629" stroke-width="1.5" />
+
+  <!-- Completion Statement -->
+  <text x="70" y="352" font-family="'Inter', sans-serif" font-size="14" fill="#a1a1aa">
+    for successfully completing <tspan fill="#ffffff" font-weight="600">Generative AI Mastermind</tspan>
+  </text>
+
+  <!-- Vaibhav Sisinty Signature -->
+  <g transform="translate(70, 480)">
+    <!-- Stylized handwritten signature -->
+    <path d="M0,20 C15,5 25,25 35,10 C45,28 60,8 75,25 C85,15 105,10 120,22" fill="none" stroke="#a3e635" stroke-width="2.2" stroke-linecap="round" />
+    <path d="M10,22 L110,20" stroke="#a3e635" stroke-width="1.2" opacity="0.8" />
+    <text x="0" y="48" font-family="'Inter', sans-serif" font-size="14" font-weight="600" fill="#ffffff">Vaibhav Sisinty</text>
+    <text x="0" y="66" font-family="'Inter', sans-serif" font-size="12" fill="#a1a1aa">Founder, Outskill</text>
+  </g>
+
+  <!-- Geometric 3x3 Dots & Sparkle Matrix (Bottom Right) -->
+  <g transform="translate(740, 400)">
+    <!-- Row 1 -->
+    <circle cx="0" cy="0" r="18" fill="#ffffff" />
+    <circle cx="60" cy="0" r="18" fill="#ffffff" />
+    <!-- Sparkle Star in Row 1 Col 3 -->
+    <path d="M120,-24 Q120,0 144,0 Q120,0 120,24 Q120,0 96,0 Q120,0 120,-24 Z" fill="#ffffff" />
+
+    <!-- Row 2 -->
+    <circle cx="0" cy="65" r="18" fill="#a3e635" />
+    <circle cx="60" cy="65" r="18" fill="#a3e635" />
+    <circle cx="120" cy="65" r="18" fill="#a3e635" />
+
+    <!-- Row 3 -->
+    <circle cx="0" cy="130" r="18" fill="#a3e635" />
+    <circle cx="60" cy="130" r="18" fill="#a3e635" />
+    <circle cx="120" cy="130" r="18" fill="#ffffff" />
+  </g>
+</svg>

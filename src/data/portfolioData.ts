@@ -346,39 +346,67 @@ export const TOOLS: ToolItem[] = [
 
 export const CERTIFICATIONS: Certification[] = [
   {
-    id: 'cert-1',
-    name: 'Certification 01: Foundations of User Experience (UX) Design',
-    organization: 'Google Career Certificates / Coursera',
-    date: '2025',
-    credentialId: 'GCC-UX-984210',
-    image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80',
-    skillsCovered: ['UX Research', 'User Personas', 'Wireframing', 'Figma Prototyping', 'Usability Audits']
+    id: 'cert-google-ux',
+    name: 'Foundations of User Experience (UX) Design',
+    organization: 'Google / Coursera',
+    issuerLogo: 'google',
+    date: 'Sep 1, 2026',
+    credentialId: 'P8W73ZVAB5GK',
+    verifyUrl: 'https://coursera.org/verify/P8W73ZVAB5GK',
+    recipientName: 'Donga Umang Hasmukhbhai',
+    signer: 'Amanda Brophy (Global Director of Google Career Certificates)',
+    image: '/cert-coursera-google-ux.svg',
+    skillsCovered: ['UX Research', 'Empathy Mapping', 'Wireframing', 'Figma Prototyping', 'Usability Audits']
   },
   {
-    id: 'cert-2',
-    name: 'Certification 02: Advanced Design Systems & Token Architecture',
-    organization: 'Figma Community & Design Academy',
-    date: '2025',
-    credentialId: 'FDM-DSA-771923',
-    image: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80',
-    skillsCovered: ['Figma Variables', 'Component Sets', 'WCAG AAA Accessibility', 'Design Tokens']
+    id: 'cert-ibm-ux',
+    name: 'Introduction to UX/UI Design',
+    organization: 'IBM / Coursera',
+    issuerLogo: 'ibm',
+    date: 'Sep 1, 2026',
+    credentialId: 'ZDL6SD2L2246',
+    verifyUrl: 'https://coursera.org/verify/ZDL6SD2L2246',
+    recipientName: 'Donga Umang Hasmukhbhai',
+    signer: 'Antonio Cangiano (Director, IBM Skills Network)',
+    image: '/cert-coursera-ibm-ux.svg',
+    skillsCovered: ['UX & UI Design', 'User Personas', 'Wireframing', 'Design Systems', 'Heuristic Evaluation']
   },
   {
-    id: 'cert-3',
-    name: 'Certification 03: Human-Computer Interaction & Usability Evaluation',
-    organization: 'Interaction Design Foundation (IxDF)',
+    id: 'cert-ibm-prompt',
+    name: 'Generative AI: Prompt Engineering Basics',
+    organization: 'IBM / Coursera',
+    issuerLogo: 'ibm',
+    date: 'Aug 4, 2026',
+    credentialId: '871IFI00NBIM',
+    verifyUrl: 'https://coursera.org/verify/871IFI00NBIM',
+    recipientName: 'DONGA UMANG HASHMUKHBHAI',
+    signer: 'Antonio Cangiano & Rav Ahuja (IBM Skills Network)',
+    image: '/cert-coursera-ibm-prompt.svg',
+    skillsCovered: ['Prompt Engineering', 'Generative AI Workflows', 'LLM Architectures', 'Few-Shot Prompting']
+  },
+  {
+    id: 'cert-outskill-genai',
+    name: 'Generative AI Mastermind',
+    organization: 'Outskill',
+    issuerLogo: 'outskill',
     date: '2024',
-    credentialId: 'IXDF-HCI-430981',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80',
-    skillsCovered: ['Cognitive Psychology', 'Information Architecture', 'Heuristic Evaluation', 'Mental Models']
+    credentialId: 'OUTSKILL-GENAI-UD',
+    recipientName: 'Umang Donga',
+    signer: 'Vaibhav Sisinty (Founder, Outskill)',
+    image: '/cert-outskill-genai.svg',
+    skillsCovered: ['GenAI for Creatives', 'AI Agent Workflows', 'Prompt Crafting', 'Creative Automation']
   },
   {
-    id: 'cert-4',
-    name: 'Certification 04: Product Strategy & Interaction Design for Modern Web',
-    organization: 'Master of Design Specialization',
-    date: '2024',
-    credentialId: 'MDES-PID-102948',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80',
-    skillsCovered: ['Service Design', 'Micro-Interactions', 'User Flow Engineering', 'Stakeholder Alignment']
+    id: 'cert-iitb-python',
+    name: 'Python 3.4.3 Training',
+    organization: 'Spoken Tutorial, IIT Bombay',
+    issuerLogo: 'iitb',
+    date: 'Oct 24, 2024',
+    credentialId: '3825388LTS',
+    scoreOrGrade: 'Score: 81.43% (4 Credits)',
+    recipientName: 'DONGA UMANG',
+    signer: 'Prof. Kannan M Moudgalya (IIT Bombay)',
+    image: '/cert-iit-bombay-python.svg',
+    skillsCovered: ['Python Programming', 'Algorithms & Logic', 'Data Structures', 'Automated Testing']
   }
 ];

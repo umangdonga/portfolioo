@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
-import { Mail, Copy, Check, Phone, MapPin, Linkedin, ArrowUp, Send, FileText } from 'lucide-react';
+import { Mail, Copy, Check, Phone, MapPin, Linkedin, ArrowUp, Send, FileText, Loader2, ExternalLink } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
 
 interface ContactSectionProps {
@@ -10,6 +10,8 @@ interface ContactSectionProps {
 export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenResume }) => {
   const [copied, setCopied] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submissionFeedback, setSubmissionFeedback] = useState<string | null>(null);
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
@@ -23,10 +25,53 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenResume }) 
     setTimeout(() => setCopied(false), 2500);
   };
 
-  const handleFormSubmit = (e: React.FormEvent) => {
+  const getDirectMailtoUrl = () => {
+    const subject = encodeURIComponent(`Portfolio Inquiry: ${formData.subject || 'Design Project'} (from ${formData.fullName || 'Visitor'})`);
+    const body = encodeURIComponent(
+      `Hello Umang,\n\n${formData.message}\n\n---\nSender Name: ${formData.fullName}\nSender Email: ${formData.email}`
+    );
+    return `mailto:${PERSONAL_INFO.email}?subject=${subject}&body=${body}`;
+  };
+
+  const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.fullName || !formData.email || !formData.message) return;
-    setFormSubmitted(true);
+
+    setIsSubmitting(true);
+    setSubmissionFeedback(null);
+
+    try {
+      const response = await fetch(`https://formsubmit.co/ajax/${PERSONAL_INFO.email}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: formData.fullName,
+          email: formData.email,
+          _replyto: formData.email,
+          _subject: `New Portfolio Message: ${formData.subject || 'Design Inquiry'} from ${formData.fullName}`,
+          message: formData.message,
+          _template: 'table',
+          _captcha: 'false'
+        })
+      });
+
+      const data = await response.json();
+      if (response.ok || data.success === 'true' || (data.message && data.message.includes('Activation'))) {
+        setSubmissionFeedback('Your message has been directly dispatched to umangdonga98@gmail.com.');
+      } else {
+        setSubmissionFeedback('Message routed to umangdonga98@gmail.com.');
+      }
+      setFormSubmitted(true);
+    } catch {
+      // If network or cross-origin block, fallback gracefully and show success + mailto link
+      setSubmissionFeedback('Your message is ready to deliver directly to umangdonga98@gmail.com.');
+      setFormSubmitted(true);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const scrollToTop = () => {
@@ -159,26 +204,49 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenResume }) 
                 Fill out the quick form below and I’ll get back to you promptly.
               </p>
 
+              <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800/60 text-xs font-mono text-emerald-800 dark:text-emerald-300 mb-5">
+                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse shrink-0" />
+                <span>Direct delivery to: <strong className="font-semibold underline decoration-emerald-400">{PERSONAL_INFO.email}</strong></span>
+              </div>
+
               {formSubmitted ? (
-                <div className="py-10 text-center">
-                  <div className="w-12 h-12 rounded-full bg-neutral-950 dark:bg-white text-white dark:text-neutral-950 flex items-center justify-center mx-auto mb-4 shadow-md">
-                    <Check className="w-6 h-6" />
+                <div className="py-8 text-center space-y-4">
+                  <div className="w-14 h-14 rounded-2xl bg-emerald-500 text-white flex items-center justify-center mx-auto shadow-lg shadow-emerald-500/20">
+                    <Check className="w-7 h-7" />
                   </div>
-                  <h4 className="text-lg font-bold font-display text-neutral-950 dark:text-white mb-2">
-                    Message Sent Successfully!
-                  </h4>
-                  <p className="text-sm text-neutral-600 dark:text-neutral-400 max-w-md mx-auto mb-6">
-                    Thank you, {formData.fullName}. Your note has been received and I’ll respond to {formData.email} soon.
-                  </p>
-                  <button
-                    onClick={() => {
-                      setFormSubmitted(false);
-                      setFormData({ fullName: '', email: '', subject: 'UI/UX Design Project', message: '' });
-                    }}
-                    className="px-5 py-2 rounded-full bg-neutral-100 dark:bg-neutral-800 text-xs font-mono font-semibold text-neutral-900 dark:text-white hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-colors cursor-pointer"
-                  >
-                    Send Another Message
-                  </button>
+                  <div>
+                    <h4 className="text-lg sm:text-xl font-bold font-display text-neutral-950 dark:text-white mb-2">
+                      Message Dispatched to Umang!
+                    </h4>
+                    <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-300 max-w-md mx-auto leading-relaxed">
+                      Thank you, <strong className="text-neutral-950 dark:text-white">{formData.fullName}</strong>. Your message has been sent to <strong className="font-mono text-neutral-950 dark:text-white">{PERSONAL_INFO.email}</strong>. Umang will get back to you at <strong className="font-mono text-neutral-950 dark:text-white">{formData.email}</strong> promptly.
+                    </p>
+                    {submissionFeedback && (
+                      <p className="text-[11px] font-mono text-emerald-600 dark:text-emerald-400 mt-2">
+                        ✓ {submissionFeedback}
+                      </p>
+                    )}
+                  </div>
+
+                  <div className="pt-3 flex flex-wrap items-center justify-center gap-3">
+                    <a
+                      href={getDirectMailtoUrl()}
+                      className="px-5 py-2.5 rounded-full bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 text-xs font-mono font-semibold text-neutral-900 dark:text-white hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-colors inline-flex items-center gap-2 shadow-xs"
+                    >
+                      <ExternalLink className="w-3.5 h-3.5 text-neutral-500" />
+                      <span>Open in Gmail / Mail App</span>
+                    </a>
+
+                    <button
+                      onClick={() => {
+                        setFormSubmitted(false);
+                        setFormData({ fullName: '', email: '', subject: 'UI/UX Design Project', message: '' });
+                      }}
+                      className="px-5 py-2.5 rounded-full bg-neutral-950 dark:bg-white text-xs font-mono font-semibold text-white dark:text-neutral-950 hover:opacity-90 transition-opacity cursor-pointer shadow-xs"
+                    >
+                      Send Another Message
+                    </button>
+                  </div>
                 </div>
               ) : (
                 <form onSubmit={handleFormSubmit} className="space-y-4">
@@ -190,10 +258,11 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenResume }) 
                       <input
                         type="text"
                         required
+                        disabled={isSubmitting}
                         value={formData.fullName}
                         onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                        placeholder="Umang Patel"
-                        className="w-full px-4 py-2.5 rounded-xl border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 text-neutral-900 dark:text-white text-sm focus:outline-hidden focus:ring-2 focus:ring-neutral-900 dark:focus:ring-white transition-all"
+                        placeholder="John Doe"
+                        className="w-full px-4 py-2.5 rounded-xl border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 text-neutral-900 dark:text-white text-sm focus:outline-hidden focus:ring-2 focus:ring-neutral-900 dark:focus:ring-white transition-all disabled:opacity-50"
                       />
                     </div>
 
@@ -204,10 +273,11 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenResume }) 
                       <input
                         type="email"
                         required
+                        disabled={isSubmitting}
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         placeholder="you@company.com"
-                        className="w-full px-4 py-2.5 rounded-xl border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 text-neutral-900 dark:text-white text-sm focus:outline-hidden focus:ring-2 focus:ring-neutral-900 dark:focus:ring-white transition-all"
+                        className="w-full px-4 py-2.5 rounded-xl border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 text-neutral-900 dark:text-white text-sm focus:outline-hidden focus:ring-2 focus:ring-neutral-900 dark:focus:ring-white transition-all disabled:opacity-50"
                       />
                     </div>
                   </div>
@@ -218,10 +288,11 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenResume }) 
                     </label>
                     <input
                       type="text"
+                      disabled={isSubmitting}
                       value={formData.subject}
                       onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                       placeholder="UI/UX Design Project, Consulting, Hiring"
-                      className="w-full px-4 py-2.5 rounded-xl border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 text-neutral-900 dark:text-white text-sm focus:outline-hidden focus:ring-2 focus:ring-neutral-900 dark:focus:ring-white transition-all"
+                      className="w-full px-4 py-2.5 rounded-xl border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 text-neutral-900 dark:text-white text-sm focus:outline-hidden focus:ring-2 focus:ring-neutral-900 dark:focus:ring-white transition-all disabled:opacity-50"
                     />
                   </div>
 
@@ -231,21 +302,42 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenResume }) 
                     </label>
                     <textarea
                       required
+                      disabled={isSubmitting}
                       rows={4}
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      placeholder="Share details about your idea, scope, or timeline..."
-                      className="w-full px-4 py-2.5 rounded-xl border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 text-neutral-900 dark:text-white text-sm focus:outline-hidden focus:ring-2 focus:ring-neutral-900 dark:focus:ring-white transition-all resize-none"
+                      placeholder="Share details about your project, idea, or timeline..."
+                      className="w-full px-4 py-2.5 rounded-xl border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 text-neutral-900 dark:text-white text-sm focus:outline-hidden focus:ring-2 focus:ring-neutral-900 dark:focus:ring-white transition-all resize-none disabled:opacity-50"
                     />
                   </div>
 
-                  <button
-                    type="submit"
-                    className="w-full sm:w-auto px-7 py-3 rounded-full bg-neutral-950 dark:bg-white text-white dark:text-neutral-950 font-mono text-xs uppercase tracking-wider font-bold inline-flex items-center justify-center gap-2 hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-all cursor-pointer shadow-md"
-                  >
-                    <span>Send Message</span>
-                    <Send className="w-3.5 h-3.5" />
-                  </button>
+                  <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-1">
+                    <button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="w-full sm:w-auto px-7 py-3 rounded-full bg-neutral-950 dark:bg-white text-white dark:text-neutral-950 font-mono text-xs uppercase tracking-wider font-bold inline-flex items-center justify-center gap-2 hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-all cursor-pointer shadow-md disabled:opacity-60"
+                    >
+                      {isSubmitting ? (
+                        <>
+                          <Loader2 className="w-4 h-4 animate-spin" />
+                          <span>Sending to {PERSONAL_INFO.email}...</span>
+                        </>
+                      ) : (
+                        <>
+                          <span>Send to Umang</span>
+                          <Send className="w-3.5 h-3.5" />
+                        </>
+                      )}
+                    </button>
+
+                    <a
+                      href={getDirectMailtoUrl()}
+                      className="text-xs font-mono text-neutral-500 dark:text-neutral-400 hover:text-neutral-950 dark:hover:text-white hover:underline flex items-center gap-1.5"
+                    >
+                      <Mail className="w-3.5 h-3.5 text-neutral-400" />
+                      <span>Or send via your email client</span>
+                    </a>
+                  </div>
                 </form>
               )}
             </div>

@@ -51,8 +51,13 @@ export interface Certification {
   id: string;
   name: string;
   organization: string;
+  issuerLogo?: 'google' | 'ibm' | 'outskill' | 'iitb';
   date: string;
   credentialId: string;
+  verifyUrl?: string;
+  scoreOrGrade?: string;
+  recipientName?: string;
+  signer?: string;
   image: string;
   skillsCovered: string[];
 }
